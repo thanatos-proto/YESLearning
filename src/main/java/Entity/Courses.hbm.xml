@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.Courses" table="courses" schema="yes">
+        <id name="cId">
+            <column name="CId" sql-type="int(11)"/>
+        </id>
+        <property name="cStartDate">
+            <column name="CStartDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="cEndDate">
+            <column name="CEndDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="cName">
+            <column name="CName" sql-type="text" not-null="true"/>
+        </property>
+        <property name="cPrice">
+            <column name="CPrice" sql-type="float(8,2)" precision="8" scale="2" not-null="true"/>
+        </property>
+        <property name="cPath">
+            <column name="CPath" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.Questions" table="questions" schema="yes">
+        <id name="qId">
+            <column name="QId" sql-type="int(11)"/>
+        </id>
+        <property name="question">
+            <column name="Question" sql-type="text" not-null="true"/>
+        </property>
+        <property name="answer1">
+            <column name="Answer1" sql-type="text" not-null="true"/>
+        </property>
+        <property name="answer2">
+            <column name="Answer2" sql-type="text" not-null="true"/>
+        </property>
+        <property name="answer3">
+            <column name="Answer3" sql-type="text" not-null="true"/>
+        </property>
+        <property name="answer4">
+            <column name="Answer4" sql-type="text" not-null="true"/>
+        </property>
+        <property name="correct">
+            <column name="Correct" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

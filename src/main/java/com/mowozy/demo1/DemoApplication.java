@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import Model.Picture;
 
 @Controller
 @SpringBootApplication
@@ -30,11 +29,8 @@ public class DemoApplication {
 //		people.add(p2);
 //		people.add(p3);
 //
-//
-//
 //		model.addAttribute("people",people);
-		Picture edu1 = new Picture("img/bg-pattern/edu-2.jpg");
-		model.addAttribute("edu1",edu1);
+
 		return "index";
 	}
 

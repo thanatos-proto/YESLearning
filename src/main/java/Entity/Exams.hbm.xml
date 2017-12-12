@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.Exams" table="exams" schema="yes">
+        <id name="eId">
+            <column name="EId" sql-type="int(11)"/>
+        </id>
+        <property name="q1">
+            <column name="Q1" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q2">
+            <column name="Q2" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q3">
+            <column name="Q3" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q4">
+            <column name="Q4" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q5">
+            <column name="Q5" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q6">
+            <column name="Q6" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q7">
+            <column name="Q7" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q8">
+            <column name="Q8" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q9">
+            <column name="Q9" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="q10">
+            <column name="Q10" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="total">
+            <column name="Total" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="eStartDate">
+            <column name="EStartDate" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="eEndDate">
+            <column name="EEndDate" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

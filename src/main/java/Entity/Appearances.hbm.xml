@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entity.Appearances" table="appearances" schema="yes">
+        <id name="aId">
+            <column name="AId" sql-type="int(11)"/>
+        </id>
+        <property name="need">
+            <column name="Need" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="aPath">
+            <column name="APath" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
