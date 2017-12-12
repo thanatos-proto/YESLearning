@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>EduCamp - LMS Template for Courses &amp; Education</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../static/img/core-img/favicon.ico">
+
+    <!-- ===================== All CSS Files ===================== -->
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+    <!-- preloader start -->
+    <div id="preloader"></div>
+    <!-- /.end preloader -->
+
+    <!-- Header Area Start -->
+    <header class="header_area">
+        <!-- Top Header Area Start -->
+        <div class="top_header_area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md">
+                        <!--  Top Quote Area Start -->
+                        <div class="top_quote">
+                            <p>Welcome to EduCamp LMS Platform</p>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="login_language_area d-flex align-items-center float-right">
+                            <!-- Login Register Area Start -->
+                            <div class="login_register">
+                                <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> Login/Register</a>
+                            </div>
+                            <!-- Language Area Start -->
+                            <div class="language_area">
+                                <div class="dropdown">
+                                    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i> Language</button>
+                                    <ul aria-labelledby="lag" class="dropdown-menu">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">हिन्दी</a></li>
+                                        <li><a href="#">বাংলা</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area Start -->
+        <div class="main_header_area animated">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <!-- Logo Area -->
+                        <div class="logo_area">
+                            <a href="index.html"><img src="../static/img/core-img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-9">
+                        <!-- Menu Area -->
+                        <div class="main_menu_area">
+                            <div class="mainmenu">
+                                <nav>
+                                    <ul id="nav">
+                                        <li class="current_page_item"><a href="index.html">Home</a></li>
+                                        <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Home Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="index.html">Home-1</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Other Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="about-us.html">About Us</a></li>
+                                                        <li><a href="code-of-contact.html">Code of Contact</a></li>
+                                                        <li><a href="knowledgebase.html">Knowledgebase</a></li>
+                                                        <li><a href="login.html">Login</a></li>
+                                                        <li><a href="register.html">register</a></li>
+                                                        <li><a href="404.html">404 Not Found</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Blog Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="blog.html">Blog - 1</a></li>
+                                                        <li><a href="blog-sidebar.html">Blog - 2</a></li>
+                                                        <li><a href="single.html">Single Blog - 1</a></li>
+                                                        <li><a href="single-sidebar.html">Single Blog - 2</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Event Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="event-grid.html">Event Grid</a></li>
+                                                        <li><a href="event-list.html">Event List</a></li>
+                                                        <li><a href="event-details.html">Event Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Gallery Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
+                                                        <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
+                                                        <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
+                                                        <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Course Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="course-grid.html">Course Grid</a></li>
+                                                        <li><a href="course-list.html">Course List</a></li>
+                                                        <li><a href="course-details.html">Course Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Teacher Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="teachers.html">Teacher Grid</a></li>
+                                                        <li><a href="teachers-details.html">Teacher Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
+                                                <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
+                                                <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
+                                                <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">course<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="course-grid.html">Course Grid</a></li>
+                                                <li><a href="course-list.html">Course List</a></li>
+                                                <li><a href="course-details.html">Course Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">teacher<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="teachers.html">Teachers</a></li>
+                                                <li><a href="teachers-details.html">Teacher Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Event<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="event-grid.html">Event Grid</a></li>
+                                                <li><a href="event-list.html">Event List</a></li>
+                                                <li><a href="event-details.html">Event Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="contact.html">contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  ===================== Header Area End ===================== -->
+
+    <!-- Breadcumb area start -->
+    <section class="breadcumb_area" style="background-image: url(../static/img/bg-pattern/breadcumb.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcumb_section">
+                        <!-- Breadcumb page title start -->
+                        <div class="page_title">
+                            <h3>Course Detail</h3>
+                        </div>
+                        <!-- Breadcumb page pagination start -->
+                        <div class="page_pagination">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                <li>Course Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcumb area end -->
+
+    <!-- ============================== Courses Details Area Start ============================== -->
+    <section class="courses_details_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-7 col-lg-8">
+
+                    <!-- Courses Details Thumb Area Start -->
+                    <div class="courses_details_thumb">
+                        <img src="../static/img/course-img/event-details.jpg" alt="">
+                        <!-- Courses Details Thumb Caption Area Start -->
+                    </div>
+                    <!-- Courses Details Thumb Area End -->
+
+                    <!-- Courses Overview -->
+                    <div class="courses_overview">
+                        <h5>Courses Overview</h5>
+                    </div>
+
+                    <!-- Courses Overview Content -->
+                    <div class="couress_overview_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sunt, reiciendis corrupti maiores voluptas dicta nesciunt sed accusamus aperiam inventore? Autem tempore ratione assumenda modi, fugiat at beatae nihil simili. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In reprehenderit consectetur sed dolores voluptatem culpa necessitatibus debitis repudiandae, architecto sint eum fugiat corporis facilis totam accusantium est omnis rem ex!</p>
+                    </div>
+
+                    <!-- Courses Description -->
+                    <div class="courses_description">
+                        <h5>Course Description</h5>
+                    </div>
+
+                    <!-- Courses Description Content -->
+                    <div class="courses_description_content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus similique ipsum quaerat tempore, eum, iusto cupiditate? Illum quis, maxime necessitatibus? Voluptatibus soluta maxime odio neque assumenda. Eaque dignissimos iste asperiores veritatis neque?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus similique ipsum quaerat tempore, eum, iusto cupiditate? Illum quis, maxime necessitatibus? Voluptatibus soluta maxime odio neque assumenda. Eaque dignissimos iste asperiores veritatis neque?</p>
+                    </div>
+
+                    <!-- Courses Description -->
+                    <div class="courses_description m-bottom-50">
+                        <h5>Related Courses</h5>
+                    </div>
+
+                    <!-- Single Courses Area Start -->
+                    <div class="row">
+                        <!-- Single Courses Area Start -->
+                        <div class="col-12 col-lg-6">
+                            <!-- Single Courses Area Start -->
+                            <div class="single_courses">
+                                <div class="single_courses_thumb">
+                                    <div class="courses_badge">
+                                        <span>New</span>
+                                    </div>
+                                    <img src="../static/img/course-img/c-3.jpg" alt="">
+                                </div>
+                                <div class="single_courses_desc">
+                                    <div class="title">
+                                        <a href="#">Introduction to Family Engagement in Education</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                                    </div>
+                                    <div class="price_rating_area d-flex align-items-center">
+                                        <div class="price w-50">
+                                            <span>$199</span>
+                                        </div>
+                                        <div class="rating text-right w-50">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            <span>(4 Vote)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Courses Area Start -->
+                        <div class="col-12 col-lg-6">
+                            <!-- Single Courses Area Start -->
+                            <div class="single_courses">
+                                <div class="single_courses_thumb">
+                                    <div class="courses_badge">
+                                        <span>-25%</span>
+                                    </div>
+                                    <img src="../static/img/course-img/c-4.jpg" alt="">
+                                </div>
+                                <div class="single_courses_desc">
+                                    <div class="title">
+                                        <a href="#">Introduction to Family Engagement in Education</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                                    </div>
+                                    <div class="price_rating_area d-flex align-items-center">
+                                        <div class="price w-50">
+                                            <span>$199</span>
+                                        </div>
+                                        <div class="rating text-right w-50">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            <span>(4 Vote)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Courses Area End -->
+                </div>
+
+                <!-- ==================== Sidebar Area Start ==================== -->
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="sidebar_area">
+
+                        <!-- Single Sidebar Content Start -->
+                        <div class="single_sidebar_content">
+                            <div class="row">
+
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-usd" aria-hidden="true"></i>
+                                        <p>Fee:</p>
+                                        <p>$315</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <p>Total Seats:</p>
+                                        <p>1500 Seats</p>
+                                    </div>
+                                </div>
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                        <p>Start:</p>
+                                        <p>09 Nov’16</p>
+                                    </div>
+                                </div>
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                                        <p>End:</p>
+                                        <p>28 Feb’17</p>
+                                    </div>
+                                </div>
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <p>Location:</p>
+                                        <p>Campus</p>
+                                    </div>
+                                </div>
+                                <!-- Single Option -->
+                                <div class="col-6 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <p>Duration :</p>
+                                        <p>3 month</p>
+                                    </div>
+                                </div>
+
+                                <!-- Single Option -->
+                                <div class="col-12 clearfix">
+                                    <div class="single_option clearfix">
+                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                        <h5><a href="dummy-data/worksheet.pdf" download>Download Full Course Plan</a></h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Single Sidebar Content End -->
+
+                        <!-- Single Sidebar Content Start -->
+                        <div class="single_sidebar_content">
+                            <!-- Event Share Links -->
+                            <div class="event_share_links">
+                                <div class="single_share_link">
+                                    <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="single_share_link">
+                                    <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="single_share_link">
+                                    <a href=""><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="single_share_link">
+                                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="single_share_link">
+                                    <a href=""><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Sidebar Content End -->
+                    </div>
+                </div>
+                <!-- Sidebar Area End -->
+            </div>
+        </div>
+    </section>
+    <!-- =============== Courses Details Area End =============== -->
+
+    <!-- ===================== Footer Area Start ===================== -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="section_padding_100_70">
+                <div class="row">
+                    <!-- Footer About Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="footer_about_us footer-single-part">
+                            <div class="title">
+                                <h4>About EduCamp</h4>
+                                <!-- Useful Links Title -->
+                                <div class="underline"></div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nostrum, illum quod facilis minima natus adipisci, fugit provident! Totam ipsam, ullam aut. Autem, corporis, tenetur.</p>
+                            <div class="footer_social_links">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer About Area End -->
+
+                    <!-- Contact info Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="footer_contact_info footer-single-part">
+                            <div class="title">
+                                <h4>get in touch</h4>
+                                <!-- Useful Links Title -->
+                                <div class="underline"></div>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                                <p>House - 87, Mirpur DOHS, Dhaka, Bangladesh</p>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+8801791166123">+88 698 257 14520</a>
+                                <a href="tel:+8801791166123">+88 698 257 14521</a>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <a href="mailto:info@educamp.com">info@educamp.com</a>
+                                <a href="mailto:care@educamp.com">care@educamp.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact info Area End -->
+
+                    <!-- Useful Links Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="important_links footer-single-part">
+                            <div class="title">
+                                <h4>useful links</h4>
+                                <div class="underline"></div>
+                            </div>
+                            <!-- Links Start -->
+                            <div class="links">
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> All Our Courses</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Event Calendar</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Customer Support</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Career at EduCamp</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Terms &amp; Conditions</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Community Forums</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Useful Links Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="important_links footer-single-part">
+                            <div class="title">
+                                <h4>Subscribe Newsletter</h4>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="newsletter_from">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Your E-mail" required>
+                                    </div>
+                                    <button type="submit" class="btn blog-btn w-100">Submit <i class="fa fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area Start -->
+        <div class="footer_bottom_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer_bottom">
+                            <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#">Designing World</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===================== Footer Area End ===================== -->
+
+    <!-- ===================== All jQuery Plugins ===================== -->
+
+    <!-- jQuery (necessary for all JavaScript plugins) -->
+    <script th:src="static/js/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script th:src="static/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script th:src="static/js/static.min.js"></script>
+    <!-- Plugins js -->
+    <script th:src="static/js/plugins.js"></script>
+    <!-- Active js -->
+    <script th:src="static/js/custom.js"></script>
+</body>
+
+</html>
