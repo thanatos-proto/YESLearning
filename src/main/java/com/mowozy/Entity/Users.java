@@ -27,9 +27,6 @@ public class Users {
     @Column(name = "Email", nullable = true, length = -1)
     private String email;
 
-    public Users() {
-        super();
-    }
 
     public int getuId() {
         return uId;
