@@ -35,8 +35,6 @@ public class UserController {
     @RequestMapping(value = "userLogin", method = RequestMethod.POST)
     String userLogin(Users user, Model model){
 
-
-
         boolean flag = userService.verifyUser(user);
         if(flag){
             return"users-details";
