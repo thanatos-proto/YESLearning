@@ -1,33 +1,25 @@
 package com.mowozy.Entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Users {
+    private int uId;
+    private String password;
+    private Integer grade;
+    private Integer authority;
+    private Integer uaId;
+    private String email;
+    private String name;
+
     @Id
     @Column(name = "UId", nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int uId;
-    @Basic
-    @Column(name = "Password", nullable = true)
-    private Integer password;
-    @Basic
-    @Column(name = "Grade", nullable = true)
-    private Integer grade;
-    @Basic
-    @Column(name = "Authority", nullable = true)
-    private Integer authority;
-    @Basic
-    @Column(name = "UAId", nullable = true)
-    private Integer uaId;
-    @Basic
-    @Column(name = "Email", nullable = true, length = -1)
-    private String email;
-
-
     public int getuId() {
         return uId;
     }
@@ -36,16 +28,18 @@ public class Users {
         this.uId = uId;
     }
 
-
-    public Integer getPassword() {
+    @Basic
+    @Column(name = "Password", nullable = true, length = -1)
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-
+    @Basic
+    @Column(name = "Grade", nullable = true)
     public Integer getGrade() {
         return grade;
     }
@@ -54,7 +48,8 @@ public class Users {
         this.grade = grade;
     }
 
-
+    @Basic
+    @Column(name = "Authority", nullable = true)
     public Integer getAuthority() {
         return authority;
     }
@@ -63,7 +58,8 @@ public class Users {
         this.authority = authority;
     }
 
-
+    @Basic
+    @Column(name = "UAId", nullable = true)
     public Integer getUaId() {
         return uaId;
     }
@@ -72,13 +68,24 @@ public class Users {
         this.uaId = uaId;
     }
 
-
+    @Basic
+    @Column(name = "Email", nullable = true, length = -1)
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Basic
+    @Column(name = "name", nullable = true, length = -1)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -94,6 +101,7 @@ public class Users {
         if (authority != null ? !authority.equals(users.authority) : users.authority != null) return false;
         if (uaId != null ? !uaId.equals(users.uaId) : users.uaId != null) return false;
         if (email != null ? !email.equals(users.email) : users.email != null) return false;
+        if (name != null ? !name.equals(users.name) : users.name != null) return false;
 
         return true;
     }
@@ -106,6 +114,7 @@ public class Users {
         result = 31 * result + (authority != null ? authority.hashCode() : 0);
         result = 31 * result + (uaId != null ? uaId.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
 }

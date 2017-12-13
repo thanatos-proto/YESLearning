@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Questions {
@@ -16,6 +16,8 @@ public class Questions {
     private String answer2;
     private String answer3;
     private String answer4;
+    private String answer5;
+    private String answer6;
     private String correct;
 
     @Id
@@ -79,6 +81,26 @@ public class Questions {
     }
 
     @Basic
+    @Column(name = "Answer5", nullable = true, length = -1)
+    public String getAnswer5() {
+        return answer5;
+    }
+
+    public void setAnswer5(String answer5) {
+        this.answer5 = answer5;
+    }
+
+    @Basic
+    @Column(name = "Answer6", nullable = true, length = -1)
+    public String getAnswer6() {
+        return answer6;
+    }
+
+    public void setAnswer6(String answer6) {
+        this.answer6 = answer6;
+    }
+
+    @Basic
     @Column(name = "Correct", nullable = true, length = -1)
     public String getCorrect() {
         return correct;
@@ -101,6 +123,8 @@ public class Questions {
         if (answer2 != null ? !answer2.equals(questions.answer2) : questions.answer2 != null) return false;
         if (answer3 != null ? !answer3.equals(questions.answer3) : questions.answer3 != null) return false;
         if (answer4 != null ? !answer4.equals(questions.answer4) : questions.answer4 != null) return false;
+        if (answer5 != null ? !answer5.equals(questions.answer5) : questions.answer5 != null) return false;
+        if (answer6 != null ? !answer6.equals(questions.answer6) : questions.answer6 != null) return false;
         if (correct != null ? !correct.equals(questions.correct) : questions.correct != null) return false;
 
         return true;
@@ -114,6 +138,8 @@ public class Questions {
         result = 31 * result + (answer2 != null ? answer2.hashCode() : 0);
         result = 31 * result + (answer3 != null ? answer3.hashCode() : 0);
         result = 31 * result + (answer4 != null ? answer4.hashCode() : 0);
+        result = 31 * result + (answer5 != null ? answer5.hashCode() : 0);
+        result = 31 * result + (answer6 != null ? answer6.hashCode() : 0);
         result = 31 * result + (correct != null ? correct.hashCode() : 0);
         return result;
     }

@@ -8,6 +8,12 @@
         <id name="gId">
             <column name="GId" sql-type="int(11)"/>
         </id>
+        <property name="uId">
+            <column name="UId" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="eId">
+            <column name="EId" sql-type="int(11)" not-null="true"/>
+        </property>
         <property name="gDate">
             <column name="GDate" sql-type="datetime" not-null="true"/>
         </property>

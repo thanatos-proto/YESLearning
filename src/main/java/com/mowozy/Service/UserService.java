@@ -22,5 +22,16 @@ public class UserService {
             return false;
         }
     }
+
+    public boolean  registerUser(Users user){
+        if(userDao.findByEmail(user.getEmail()).isEmpty()){
+            userDao.save(user);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 }
 

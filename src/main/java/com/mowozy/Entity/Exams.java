@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Exams {

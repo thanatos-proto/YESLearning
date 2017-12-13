@@ -9,7 +9,7 @@
             <column name="UId" sql-type="int(11)"/>
         </id>
         <property name="password">
-            <column name="Password" sql-type="int(11)" not-null="true"/>
+            <column name="Password" sql-type="text" not-null="true"/>
         </property>
         <property name="grade">
             <column name="Grade" sql-type="int(11)" not-null="true"/>
@@ -22,6 +22,9 @@
         </property>
         <property name="email">
             <column name="Email" sql-type="text" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="text" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

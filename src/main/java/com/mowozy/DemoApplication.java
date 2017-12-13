@@ -15,6 +15,10 @@ public class DemoApplication {
 //@Autowired
 //private OwnerSettings ownerSettings;
 
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
 	@RequestMapping("/") String index(Model model){
 //		return "Web Owner is:"+ ownerSettings.getWebOwner() +"Web name is:" + ownerSettings.getWebName() ;
 //		Person single = new Person("asd" ,123);
@@ -40,21 +44,5 @@ public class DemoApplication {
 
 	@RequestMapping("about-us")String aboutUs(Model model){
 		return "about-us";
-	}
-
-	@RequestMapping("404")String P404(Model model){
-		return "404";
-	}
-
-	@RequestMapping("users-details")String userdetails(Model model){
-		return "users-details";
-	}
-
-	@RequestMapping("teachers-details")String teachersDetails(Model model){
-		return "teachers-details";
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
 	}
 }

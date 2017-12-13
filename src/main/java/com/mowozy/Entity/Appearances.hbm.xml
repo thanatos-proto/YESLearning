@@ -11,6 +11,5 @@
         <property name="need">
             <column name="Need" sql-type="int(11)" not-null="true"/>
         </property>
-
     </class>
 </hibernate-mapping>

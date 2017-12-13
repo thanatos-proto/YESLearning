@@ -7,11 +7,13 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Grades {
     private int gId;
+    private Integer uId;
+    private Integer eId;
     private Timestamp gDate;
     private Integer grade;
 
@@ -23,6 +25,26 @@ public class Grades {
 
     public void setgId(int gId) {
         this.gId = gId;
+    }
+
+    @Basic
+    @Column(name = "UId", nullable = true)
+    public Integer getuId() {
+        return uId;
+    }
+
+    public void setuId(Integer uId) {
+        this.uId = uId;
+    }
+
+    @Basic
+    @Column(name = "EId", nullable = true)
+    public Integer geteId() {
+        return eId;
+    }
+
+    public void seteId(Integer eId) {
+        this.eId = eId;
     }
 
     @Basic
@@ -53,6 +75,8 @@ public class Grades {
         Grades grades = (Grades) o;
 
         if (gId != grades.gId) return false;
+        if (uId != null ? !uId.equals(grades.uId) : grades.uId != null) return false;
+        if (eId != null ? !eId.equals(grades.eId) : grades.eId != null) return false;
         if (gDate != null ? !gDate.equals(grades.gDate) : grades.gDate != null) return false;
         if (grade != null ? !grade.equals(grades.grade) : grades.grade != null) return false;
 
@@ -62,6 +86,8 @@ public class Grades {
     @Override
     public int hashCode() {
         int result = gId;
+        result = 31 * result + (uId != null ? uId.hashCode() : 0);
+        result = 31 * result + (eId != null ? eId.hashCode() : 0);
         result = 31 * result + (gDate != null ? gDate.hashCode() : 0);
         result = 31 * result + (grade != null ? grade.hashCode() : 0);
         return result;

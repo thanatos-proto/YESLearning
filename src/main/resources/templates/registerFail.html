@@ -230,29 +230,15 @@
                 <!-- Register form area start  -->
                 <div class="col-12 col-lg-7 col-xl-6">
                     <div class="register_form">
-                        <form action="#" method="post" th:action="@{/userRegister}" th:object="${user}">
+                        <form action="#" method="post" th:action="@{/register}">
                             <!-- Single Register input area start  -->
                             <div class="form-group">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <input type="text" name="name" id="user_name" placeholder="Name" th:field="*{name}">
+                                <label th:text = "'邮箱 '+${email}+'已被占用'"></label>
                             </div>
+
                             <!-- Single Register input area start  -->
-                            <div class="form-group">
-                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                <input type="email" name="email" id="email" placeholder="Email" th:field="*{email}">
-                            </div>
-                            <!-- Single Register input area start  -->
-                            <div class="form-group">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                <input type="text" name="name" id="pass_a" placeholder="Password"th:field="*{password}">
-                            </div>
-                            <!-- Single Register input area start  -->
-                            <div class="form-group">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                <input type="text" name="name" id="pass_b" placeholder="Confirm Password" >
-                            </div>
-                            <!-- Single Register input area start  -->
-                            <button type="submit" class="btn btn-default" id="login_submit">Sign Up</button>
+                            <button type="submit" class="btn btn-default" id="login_submit">Rigister Again</button>
                         </form>
                         <div class="already_have_account">
                             <a href="login.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Already have a account? Login</a>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.mowozy.Entity.Userscourses" table="userscourses" schema="yes">
+        <id name="ucId">
+            <column name="UCId" sql-type="int(11)"/>
+        </id>
+        <property name="uId">
+            <column name="UId" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="cId">
+            <column name="CId" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

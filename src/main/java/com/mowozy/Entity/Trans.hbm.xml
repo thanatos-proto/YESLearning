@@ -8,6 +8,9 @@
         <id name="tId">
             <column name="TId" sql-type="int(11)"/>
         </id>
+        <property name="uId">
+            <column name="UId" sql-type="int(11)" not-null="true"/>
+        </property>
         <property name="tStartDate">
             <column name="TStartDate" sql-type="datetime" not-null="true"/>
         </property>

@@ -7,11 +7,11 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Courses {
-    private Integer cId;
+    private int cId;
     private Date cStartDate;
     private Date cEndDate;
     private String cName;

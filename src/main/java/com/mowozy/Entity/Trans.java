@@ -7,11 +7,12 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Trans {
     private int tId;
+    private Integer uId;
     private Timestamp tStartDate;
     private Integer tuId;
     private Integer tPrice;
@@ -26,6 +27,16 @@ public class Trans {
 
     public void settId(int tId) {
         this.tId = tId;
+    }
+
+    @Basic
+    @Column(name = "UId", nullable = true)
+    public Integer getuId() {
+        return uId;
+    }
+
+    public void setuId(Integer uId) {
+        this.uId = uId;
     }
 
     @Basic
@@ -86,6 +97,7 @@ public class Trans {
         Trans trans = (Trans) o;
 
         if (tId != trans.tId) return false;
+        if (uId != null ? !uId.equals(trans.uId) : trans.uId != null) return false;
         if (tStartDate != null ? !tStartDate.equals(trans.tStartDate) : trans.tStartDate != null) return false;
         if (tuId != null ? !tuId.equals(trans.tuId) : trans.tuId != null) return false;
         if (tPrice != null ? !tPrice.equals(trans.tPrice) : trans.tPrice != null) return false;
@@ -98,6 +110,7 @@ public class Trans {
     @Override
     public int hashCode() {
         int result = tId;
+        result = 31 * result + (uId != null ? uId.hashCode() : 0);
         result = 31 * result + (tStartDate != null ? tStartDate.hashCode() : 0);
         result = 31 * result + (tuId != null ? tuId.hashCode() : 0);
         result = 31 * result + (tPrice != null ? tPrice.hashCode() : 0);

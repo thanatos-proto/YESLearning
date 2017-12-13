@@ -23,6 +23,12 @@
         <property name="answer4">
             <column name="Answer4" sql-type="text" not-null="true"/>
         </property>
+        <property name="answer5">
+            <column name="Answer5" sql-type="text" not-null="true"/>
+        </property>
+        <property name="answer6">
+            <column name="Answer6" sql-type="text" not-null="true"/>
+        </property>
         <property name="correct">
             <column name="Correct" sql-type="text" not-null="true"/>
         </property>

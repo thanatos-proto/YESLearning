@@ -6,11 +6,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-12.
+ * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
 public class Appearances {
-    private Integer aId;
+    private int aId;
     private Integer need;
 
     @Id
