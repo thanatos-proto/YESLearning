@@ -1,4 +1,4 @@
-package Entity;
+package com.mowozy.Entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;

@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Entity.Exams" table="exams" schema="yes">
+    <class name="com.mowozy.Entity.Exams" table="exams" schema="yes">
         <id name="eId">
             <column name="EId" sql-type="int(11)"/>
         </id>

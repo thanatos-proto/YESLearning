@@ -4,13 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Entity.FkUsersCourses" table="fk_users_courses" schema="yes">
-        <composite-id mapped="true" class="Entity.FkUsersCoursesPK">
-            <key-property name="cId">
-                <column name="CId" sql-type="int(11)"/>
-            </key-property>
+    <class name="com.mowozy.Entity.FkUsersAppearances" table="fk_users_appearances" schema="yes">
+        <composite-id mapped="true" class="com.mowozy.Entity.FkUsersAppearancesPK">
             <key-property name="uId">
                 <column name="UId" sql-type="int(11)"/>
+            </key-property>
+            <key-property name="aId">
+                <column name="AId" sql-type="int(11)"/>
             </key-property>
         </composite-id>
     </class>

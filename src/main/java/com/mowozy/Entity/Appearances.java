@@ -1,4 +1,4 @@
-package Entity;
+package com.mowozy.Entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -10,9 +10,8 @@ import javax.persistence.Id;
  */
 @Entity
 public class Appearances {
-    private int aId;
+    private Integer aId;
     private Integer need;
-    private String aPath;
 
     @Id
     @Column(name = "AId", nullable = false)
@@ -34,16 +33,6 @@ public class Appearances {
         this.need = need;
     }
 
-    @Basic
-    @Column(name = "APath", nullable = true, length = -1)
-    public String getaPath() {
-        return aPath;
-    }
-
-    public void setaPath(String aPath) {
-        this.aPath = aPath;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,7 +42,6 @@ public class Appearances {
 
         if (aId != that.aId) return false;
         if (need != null ? !need.equals(that.need) : that.need != null) return false;
-        if (aPath != null ? !aPath.equals(that.aPath) : that.aPath != null) return false;
 
         return true;
     }
@@ -62,7 +50,6 @@ public class Appearances {
     public int hashCode() {
         int result = aId;
         result = 31 * result + (need != null ? need.hashCode() : 0);
-        result = 31 * result + (aPath != null ? aPath.hashCode() : 0);
         return result;
     }
 }

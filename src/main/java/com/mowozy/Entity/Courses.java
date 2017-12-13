@@ -1,4 +1,4 @@
-package Entity;
+package com.mowozy.Entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -11,7 +11,7 @@ import java.sql.Date;
  */
 @Entity
 public class Courses {
-    private int cId;
+    private Integer cId;
     private Date cStartDate;
     private Date cEndDate;
     private String cName;

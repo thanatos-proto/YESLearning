@@ -4,15 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="Entity.Appearances" table="appearances" schema="yes">
+    <class name="com.mowozy.Entity.Appearances" table="appearances" schema="yes">
         <id name="aId">
             <column name="AId" sql-type="int(11)"/>
         </id>
         <property name="need">
             <column name="Need" sql-type="int(11)" not-null="true"/>
         </property>
-        <property name="aPath">
-            <column name="APath" sql-type="text" not-null="true"/>
-        </property>
+
     </class>
 </hibernate-mapping>

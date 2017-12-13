@@ -1,4 +1,4 @@
-package com.mowozy.demo1;
+package com.mowozy;
 
 
 import org.springframework.boot.SpringApplication;
@@ -38,15 +38,18 @@ public class DemoApplication {
 		return "index";
 	}
 
-	@RequestMapping("login")String logIn(Model model){
-		return "login";
-	}
 	@RequestMapping("about-us")String aboutUs(Model model){
 		return "about-us";
 	}
-	@RequestMapping("register")String register(Model model){
-		return "register";
+
+	@RequestMapping("404")String P404(Model model){
+		return "404";
 	}
+
+	@RequestMapping("users-details")String userdetails(Model model){
+		return "users-details";
+	}
+
 	@RequestMapping("teachers-details")String teachersDetails(Model model){
 		return "teachers-details";
 	}

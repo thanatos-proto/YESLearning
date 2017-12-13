@@ -35,7 +35,7 @@
 
 <body>
     <!-- preloader start -->
-    <div id="preloader"></div>
+    <!--<div id="preloader"></div>-->
     <!-- /.end preloader -->
 
     <!-- Header Area Start -->
@@ -242,14 +242,14 @@
                         <!-- sign in manual form -->
                         <div class="login_manual_form">
                             <p>or</p>
-                            <form action="#" method="post">
+                            <form th:action="@{/userLogin}" th:object="${user}" method="POST">
                                 <div class="form-group">
                                     <i class="fa fa-user"></i>
-                                    <input type="text" name="username" id="user" placeholder="Username">
+                                    <input type="text" name="username" id="user" placeholder="Email" th:field="*{Email}"  >
                                 </div>
                                 <div class="form-group">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
-                                    <input type="password" name="username" id="pass" placeholder="Password">
+                                    <input type="password" name="username" id="pass" placeholder="Password" th:field="*{Password}">
                                 </div>
                                    <button type="submit" class="btn btn-default" id="login_submit">Sign in</button>
                             </form>

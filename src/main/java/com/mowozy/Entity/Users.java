@@ -1,9 +1,6 @@
-package Entity;
+package com.mowozy.Entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by moonwolfzy on 2017-12-12.
@@ -12,6 +9,7 @@ import javax.persistence.Id;
 public class Users {
     @Id
     @Column(name = "UId", nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int uId;
     @Basic
     @Column(name = "Password", nullable = true)
@@ -29,6 +27,9 @@ public class Users {
     @Column(name = "Email", nullable = true, length = -1)
     private String email;
 
+    public Users() {
+        super();
+    }
 
     public int getuId() {
         return uId;

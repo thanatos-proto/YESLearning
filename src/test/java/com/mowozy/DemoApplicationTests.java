@@ -1,4 +1,4 @@
-package com.mowozy.demo1;
+package com.mowozy;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

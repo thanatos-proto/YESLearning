@@ -20,24 +20,24 @@
          
                 <!-- Echo all executed SQL to stdout -->
                 <property name="show_sql">true</property>
-        <mapping resource="Entity/Appearances.hbm.xml"/>
-        <mapping class="Entity.Appearances"/>
-        <mapping resource="Entity/Courses.hbm.xml"/>
-        <mapping class="Entity.Courses"/>
-        <mapping resource="Entity/Exams.hbm.xml"/>
-        <mapping class="Entity.Exams"/>
-        <mapping resource="Entity/FkUsersAppearances.hbm.xml"/>
-        <mapping class="Entity.FkUsersAppearances"/>
-        <mapping resource="Entity/FkUsersCourses.hbm.xml"/>
-        <mapping class="Entity.FkUsersCourses"/>
-        <mapping resource="Entity/Grades.hbm.xml"/>
-        <mapping class="Entity.Grades"/>
-        <mapping resource="Entity/Questions.hbm.xml"/>
-        <mapping class="Entity.Questions"/>
-        <mapping resource="Entity/Trans.hbm.xml"/>
-        <mapping class="Entity.Trans"/>
-        <mapping resource="Entity/Users.hbm.xml"/>
-        <mapping class="Entity.Users"/>
+        <mapping resource="com/mowozy/Entity/Appearances.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Appearances"/>
+        <mapping resource="com/mowozy/Entity/Courses.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Courses"/>
+        <mapping resource="com/mowozy/Entity/Exams.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Exams"/>
+        <mapping resource="com/mowozy/Entity/FkUsersAppearances.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.FkUsersAppearances"/>
+        <mapping resource="com/mowozy/Entity/FkUsersCourses.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.FkUsersCourses"/>
+        <mapping resource="com/mowozy/Entity/Grades.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Grades"/>
+        <mapping resource="com/mowozy/Entity/Questions.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Questions"/>
+        <mapping resource="com/mowozy/Entity/Trans.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Trans"/>
+        <mapping resource="com/mowozy/Entity/Users.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Users"/>
                 <!-- Drop and re-create the database schema on startup -->
                 <!--
         <property name="hbm2ddl.auto">update</property>

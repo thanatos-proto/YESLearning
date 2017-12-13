@@ -1,18 +1,19 @@
-package Entity;
+package com.mowozy.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import java.io.Serializable;
+import javax.persistence.*;
 
 /**
  * Created by moonwolfzy on 2017-12-12.
  */
-public class FkUsersCoursesPK implements Serializable {
+@Entity
+@Table(name = "fk_users_courses", schema = "yes", catalog = "")
+@IdClass(FkUsersCoursesPK.class)
+public class FkUsersCourses {
     private int cId;
     private int uId;
 
-    @Column(name = "CId", nullable = false)
     @Id
+    @Column(name = "CId", nullable = false)
     public int getcId() {
         return cId;
     }
@@ -21,8 +22,8 @@ public class FkUsersCoursesPK implements Serializable {
         this.cId = cId;
     }
 
-    @Column(name = "UId", nullable = false)
     @Id
+    @Column(name = "UId", nullable = false)
     public int getuId() {
         return uId;
     }
@@ -36,7 +37,7 @@ public class FkUsersCoursesPK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        FkUsersCoursesPK that = (FkUsersCoursesPK) o;
+        FkUsersCourses that = (FkUsersCourses) o;
 
         if (cId != that.cId) return false;
         if (uId != that.uId) return false;
