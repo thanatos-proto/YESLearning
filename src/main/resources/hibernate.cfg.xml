@@ -20,8 +20,8 @@
          
                 <!-- Echo all executed SQL to stdout -->
                 <property name="show_sql">true</property>
-        <mapping class="com.mowozy.Entity.Appearances"/>
         <mapping resource="com/mowozy/Entity/Appearances.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Appearances"/>
         <mapping resource="com/mowozy/Entity/Courses.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Courses"/>
         <mapping resource="com/mowozy/Entity/Exams.hbm.xml"/>
@@ -32,12 +32,13 @@
         <mapping class="com.mowozy.Entity.Questions"/>
         <mapping resource="com/mowozy/Entity/Trans.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Trans"/>
-        <mapping class="com.mowozy.Entity.Users"/>
         <mapping resource="com/mowozy/Entity/Users.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Users"/>
         <mapping resource="com/mowozy/Entity/Usersappearance.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Usersappearance"/>
         <mapping resource="com/mowozy/Entity/Userscourses.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Userscourses"/>
+
                         <!-- Drop and re-create the database schema on startup -->
                 <!--
         <property name="hbm2ddl.auto">update</property>

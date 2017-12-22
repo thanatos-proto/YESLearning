@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-18.
  */
 @Entity
 public class Users {
@@ -16,7 +16,7 @@ public class Users {
     private Integer authority;
     private Integer uaId;
     private String email;
-    private String name;
+    private String uName;
 
     @Id
     @Column(name = "UId", nullable = false)
@@ -79,13 +79,13 @@ public class Users {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = -1)
-    public String getName() {
-        return name;
+    @Column(name = "UName", nullable = true, length = -1)
+    public String getuName() {
+        return uName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setuName(String uName) {
+        this.uName = uName;
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Users {
         if (authority != null ? !authority.equals(users.authority) : users.authority != null) return false;
         if (uaId != null ? !uaId.equals(users.uaId) : users.uaId != null) return false;
         if (email != null ? !email.equals(users.email) : users.email != null) return false;
-        if (name != null ? !name.equals(users.name) : users.name != null) return false;
+        if (uName != null ? !uName.equals(users.uName) : users.uName != null) return false;
 
         return true;
     }
@@ -114,7 +114,7 @@ public class Users {
         result = 31 * result + (authority != null ? authority.hashCode() : 0);
         result = 31 * result + (uaId != null ? uaId.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (uName != null ? uName.hashCode() : 0);
         return result;
     }
 }

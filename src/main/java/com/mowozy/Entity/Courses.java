@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-18.
  */
 @Entity
 public class Courses {
@@ -16,6 +16,7 @@ public class Courses {
     private Date cEndDate;
     private String cName;
     private Double cPrice;
+    private String cImage;
     private String cPath;
 
     @Id
@@ -59,13 +60,23 @@ public class Courses {
     }
 
     @Basic
-    @Column(name = "CPrice", nullable = true, precision = 2)
+    @Column(name = "CPrice", nullable = true, precision = 0)
     public Double getcPrice() {
         return cPrice;
     }
 
     public void setcPrice(Double cPrice) {
         this.cPrice = cPrice;
+    }
+
+    @Basic
+    @Column(name = "CImage", nullable = true, length = -1)
+    public String getcImage() {
+        return cImage;
+    }
+
+    public void setcImage(String cImage) {
+        this.cImage = cImage;
     }
 
     @Basic
@@ -90,6 +101,7 @@ public class Courses {
         if (cEndDate != null ? !cEndDate.equals(courses.cEndDate) : courses.cEndDate != null) return false;
         if (cName != null ? !cName.equals(courses.cName) : courses.cName != null) return false;
         if (cPrice != null ? !cPrice.equals(courses.cPrice) : courses.cPrice != null) return false;
+        if (cImage != null ? !cImage.equals(courses.cImage) : courses.cImage != null) return false;
         if (cPath != null ? !cPath.equals(courses.cPath) : courses.cPath != null) return false;
 
         return true;
@@ -102,6 +114,7 @@ public class Courses {
         result = 31 * result + (cEndDate != null ? cEndDate.hashCode() : 0);
         result = 31 * result + (cName != null ? cName.hashCode() : 0);
         result = 31 * result + (cPrice != null ? cPrice.hashCode() : 0);
+        result = 31 * result + (cImage != null ? cImage.hashCode() : 0);
         result = 31 * result + (cPath != null ? cPath.hashCode() : 0);
         return result;
     }

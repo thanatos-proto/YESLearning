@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public class UserService {
+public class UsersService {
     @Autowired
     private UsersDao userDao;
 

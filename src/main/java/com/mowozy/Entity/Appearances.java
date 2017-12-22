@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-18.
  */
 @Entity
 public class Appearances {
