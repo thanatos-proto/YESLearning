@@ -24,13 +24,13 @@ public class UsersController {
 
     @RequestMapping("/login")
     String login(Model model) {
-        model.addAttribute("user", new Users());
+        model.addAttribute("users", new Users());
         return "login";
     }
 
     @RequestMapping("/register")
     String register(Model model) {
-        model.addAttribute("user", new Users());
+        model.addAttribute("users", new Users());
         return "register";
     }
 
@@ -44,12 +44,16 @@ public class UsersController {
         boolean flag = usersService.verifyUser(user);
         if (flag) {
             request.getSession().setAttribute("userid", user.getuId());
-            return "users-details";
+            return "userspace-details";
         } else {
             request.setAttribute("error","用户名或密码错误");
             return "login";
         }
 
+    }
+
+    @RequestMapping("userspace")String userspace(Model model){
+        return "userspace";
     }
 
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
@@ -68,6 +72,9 @@ public class UsersController {
         }
 
     }
+
+
+
 }
 
 

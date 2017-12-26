@@ -1,7 +1,5 @@
 package com.mowozy.Service;
 
-import com.chen.mapper.GoodsMapper;
-import com.chen.pojo.Goods;
 import com.mowozy.Dao.CoursesDao;
 import com.mowozy.Entity.Courses;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +13,15 @@ public class CoursesService {
 	@Autowired
 	private CoursesDao coursesDao;
 	
-	public List<Courses> getCoursesById(Courses cid) {
-		return coursesDao.findByCId(cid);
+	public List<Courses> getCoursesById(Courses courses) {
+		return coursesDao.findByCId(courses.getcId());
 	}
 
 	public List<Courses> getAll() {
 		return coursesDao.findAll();
 	}
 
-	public List<Courses> getGoodByName(String cname) {
+	public List<Courses> getCourseByName(String cname) {
 		return coursesDao.findByCName(cname);
 	}
 

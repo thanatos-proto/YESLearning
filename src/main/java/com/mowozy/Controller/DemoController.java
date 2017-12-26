@@ -1,55 +1,55 @@
-package com.mowozy.Controller;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.Map;
-
-@Controller
-public class DemoController {
-
-	// 从 application.properties 中读取配置，如取不到默认值为HelloShanhy
-	@Value("${application.hello:Hello Angel}")
-	private String hello;
-
-	
-	@RequestMapping("/")
-	public String helloJsp(Map<String, Object> map) {
-		System.out.println("HelloController.helloJsp().hello=" + hello);
-		map.put("hello", hello);
-		return "index";
-	}
-
-	/**
-	 * 登录
-	 */
-	@RequestMapping("/login")
-	public String login(){
-		return "login";
-	}
-	
-	/**
-	 * 注册
-	 */
-	@RequestMapping("/register")
-	public String register(){
-		return "register";
-	}
-	
-	/**
-	 * 后台登录
-	 */
-	@RequestMapping("/adminlogin")
-	public String adminlogin(){
-		return "admin/adminlogin";
-	}
-
-	/**
-	 * 后台主页面
-	 */
-	@RequestMapping("/adminHome")
-	public String adminHome(){
-		return "admin/admin";
-	}
-}
+//package com.mowozy.Controller;
+//
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.stereotype.Controller;
+//import org.springframework.web.bind.annotation.RequestMapping;
+//
+//import java.util.Map;
+//
+//@Controller
+//public class DemoController {
+//
+//	// 从 application.properties 中读取配置，如取不到默认值为HelloShanhy
+//	@Value("${application.hello:Hello Angel}")
+//	private String hello;
+//
+//
+//	@RequestMapping("/")
+//	public String helloJsp(Map<String, Object> map) {
+//		System.out.println("HelloController.helloJsp().hello=" + hello);
+//		map.put("hello", hello);
+//		return "index";
+//	}
+//
+//	/**
+//	 * 登录
+//	 */
+//	@RequestMapping("/login")
+//	public String login(){
+//		return "login";
+//	}
+//
+//	/**
+//	 * 注册
+//	 */
+//	@RequestMapping("/register")
+//	public String register(){
+//		return "register";
+//	}
+//
+//	/**
+//	 * 后台登录
+//	 */
+//	@RequestMapping("/adminlogin")
+//	public String adminlogin(){
+//		return "admin/adminlogin";
+//	}
+//
+//	/**
+//	 * 后台主页面
+//	 */
+//	@RequestMapping("/adminHome")
+//	public String adminHome(){
+//		return "admin/admin";
+//	}
+//}

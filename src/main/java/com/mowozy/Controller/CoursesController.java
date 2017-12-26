@@ -1,7 +1,5 @@
 package com.mowozy.Controller;
 
-import com.chen.pojo.Goods;
-import com.chen.service.GoodsServiceImpl;
 import com.mowozy.Entity.Courses;
 import com.mowozy.Service.CoursesService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +28,7 @@ public class CoursesController {
 	 */
 	@RequestMapping("/det")
 	public String det(Courses courses,HttpServletRequest request){
-		List<Courses> list=coursesService.findByCId(courses.getcId());
+		List<Courses> list=coursesService.getCoursesById(courses);
 		request.getSession().setAttribute("list", list);
 		return "detail";
 	}
@@ -40,10 +38,10 @@ public class CoursesController {
 	 * @return
 	 */
 	@RequestMapping("/fuzzy")
-	public String fuzzy(HttpServletRequest request){
+	public String fuzzy(Courses courses,HttpServletRequest request){
 		String goods=request.getParameter("goods");
-		List<Goods> listgoods=goodsServiceImpl.getGoodByName(goods);
-		request.getSession().setAttribute("listgoods", listgoods);
+		List<Courses> listCourse=coursesService.getCourseByName(goods);
+		request.getSession().setAttribute("listgoods",listCourse);
 		return "search";
 	}
 	

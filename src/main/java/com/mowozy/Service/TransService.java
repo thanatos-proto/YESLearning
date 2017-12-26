@@ -1,7 +1,5 @@
 package com.mowozy.Service;
 
-import com.chen.mapper.CartMapper;
-import com.chen.pojo.Cart;
 import com.mowozy.Dao.TransDao;
 import com.mowozy.Entity.Trans;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,26 +13,27 @@ public class TransService {
 	@Autowired
 	private TransDao transDao;
 
-	public int insert(Trans cart) {
-		transDao.save(cart);
-		return
+	public int insert(Trans trans) {
+		transDao.save(trans);
+		return 1;
 	}
 
-	public int delete(Trans cart) {
-		transDao.delete(cart);
-
+	public int delete(Trans trans) {
+		transDao.delete(trans);
+		return 1;
 	}
 
-	public int update(Trans cart) {
-		transDao.save(cart);
+	public int update(Trans trans) {
+		transDao.save(trans);
+		return 1;
 	}
 
-	public List<Trans> getAll(Trans cart) {
+	public List<Trans> getAll(Trans trans) {
 		return transDao.findAll();
 	}
 
-	public List<Trans> getCartByGid(Trans cart) {
-		return transDao.findByTId(cart.gettId());
+	public List<Trans> getTransByGid(Trans trans) {
+		return transDao.findByTId(trans.gettId());
 	}
 
 

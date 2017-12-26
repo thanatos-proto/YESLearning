@@ -1,8 +1,7 @@
 package com.mowozy.Controller;
 
-import com.chen.pojo.Cart;
-import com.chen.service.CartServiceImpl;
-import com.mowozy.Dao.TransDao;
+import com.mowozy.Entity.Trans;
+import com.mowozy.Entity.Users;
 import com.mowozy.Service.TransService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @Controller
-@RequestMapping("/cart")
+@RequestMapping("/Trans")
 public class TransController {
 	
 	@Autowired
@@ -23,19 +22,19 @@ public class TransController {
 	 * 查询用户列表
 	 * @return
 	 */
+
+
+
 	@RequestMapping("/list")
-	public String list(HttpServletRequest request){
-		Cart cart = new Cart();
-		String userName = (String) request.getSession().getAttribute("username");
-		cart.setUserName(userName);
-		List<Cart> list2 = cartServiceImpl.getAll(cart);
+	public String list(Trans trans, HttpServletRequest request, Users users){
+		List<Trans> list2 = transService.getAll(trans);
 		double total = 0;
-		for (Cart cart2 : list2) {
-			total += cart2.getPrice() * cart2.getNum();
+		for (Trans trans2 : list2) {
+			total += trans2.gettPrice();
 		}
 		request.getSession().setAttribute("total", total);
 		request.getSession().setAttribute("list2", list2);
-		return "cart";
+		return "Trans";
 	}
 	
 	/**
@@ -43,50 +42,42 @@ public class TransController {
 	 * @return
 	 * @throws UnsupportedEncodingException 
 	 */
-	@RequestMapping("/add")
-	public String add(HttpServletRequest request) throws UnsupportedEncodingException{
-		
-		String userName = (String) request.getSession().getAttribute("username");
-		String gid = request.getParameter("gid");
-		String img = request.getParameter("img");
-		String name = request.getParameter("name");
-//		name = new String(name.getBytes("ISO-8859-1"), "UTF-8");
-		String type = request.getParameter("color");
-		String price = request.getParameter("price");
-		String num = request.getParameter("num");
-		Cart cart = new Cart();
-		cart.setGid(gid);
-		cart.setImg(img);
-		cart.setName(name);
-		cart.setType(type);
-		cart.setUserName(userName);
-		cart.setPrice(Double.parseDouble(price));
-		if(num != null && userName != null){
-			cart.setNum(Integer.parseInt(num));
-		}else {
-			request.setAttribute("error", "请登录后再添加购物车");
-			return "redirect:/good/det?id="+gid;
-		}
-		List<Cart> list = cartServiceImpl.getCartByGid(cart);
-		if (list == null || list.size() < 1) {
-			int result1 = cartServiceImpl.insert(cart);
-			if (result1 >= 1) {
-				request.setAttribute("success", "添加购物车成功");
-				return "redirect:/cart/list";
-			}
-		} else {
-			for (Cart cart2 : list) {
-				int num1 = cart2.getNum() + cart.getNum();
-				cart.setNum(num1);
-				int result = cartServiceImpl.update(cart);
-				if (result >= 1) {
-					request.setAttribute("success", "添加购物车成功");
-					return "redirect:/cart/list";
-				}
-			}
-		}
-		return "redirect:/cart/list";
-	}
+//	@RequestMapping("/add")
+////	public String add(Trans trans,HttpServletRequest request) throws UnsupportedEncodingException{
+////
+////		String userName = (String) request.getSession().getAttribute("username");
+////
+//////		trans.settId(gid);
+//////		trans.settImage(img);
+//////		trans.settName(name);
+//////		trans.setUserName(userName);
+//////		trans.setPrice(Double.parseDouble(price));
+////		if(num != null && userName != null){
+////			Trans.setNum(Integer.parseInt(num));
+////		}else {
+////			request.setAttribute("error", "请登录后再添加购物车");
+////			return "redirect:/good/det?id="+gid;
+////		}
+////		List<Trans> list = TransService.getTransByGid(Trans);
+////		if (list == null || list.size() < 1) {
+////			int result1 = TransService.insert(Trans);
+////			if (result1 >= 1) {
+////				request.setAttribute("success", "添加购物车成功");
+////				return "redirect:/Trans/list";
+////			}
+////		} else {
+////			for (Trans Trans2 : list) {
+////				int num1 = Trans2.getNum() + Trans.getNum();
+////				Trans.setNum(num1);
+////				int result = TransService.update(Trans);
+////				if (result >= 1) {
+////					request.setAttribute("success", "添加购物车成功");
+////					return "redirect:/Trans/list";
+////				}
+////			}
+////		}
+////		return "redirect:/Trans/list";
+////	}
 	
 	
 	/**
@@ -94,24 +85,25 @@ public class TransController {
 	 * @return
 	 * @throws UnsupportedEncodingException 
 	 */
-	@RequestMapping("/del")
-	public String del(HttpServletRequest request) throws UnsupportedEncodingException{
-		
-		String userName = (String) request.getSession().getAttribute("username");
-		String gid = request.getParameter("gid");
-		String type = request.getParameter("type");
-//		type = new String(type.getBytes("ISO-8859-1"), "UTF-8");
-		Cart cart = new Cart();
-		cart.setGid(gid);
-		cart.setType(type);
-		cart.setUserName(userName);
-		int result = cartServiceImpl.delete(cart);
-		if (result != 0) {
-			request.setAttribute("success", "删除成功");
-			return "redirect:/cart/list";
-		} else {
-			request.setAttribute("error", "删除失败");
-			return "redirect:/cart/list";
-		}
-	}
+//	@RequestMapping("/del")
+//	public String del(HttpServletRequest request) throws UnsupportedEncodingException{
+//
+//		String userName = (String) request.getSession().getAttribute("username");
+//		String gid = request.getParameter("gid");
+//		String type = request.getParameter("type");
+////		type = new String(type.getBytes("ISO-8859-1"), "UTF-8");
+//		Trans Trans = new Trans();
+////
+//		int result = TransServiceImpl.delete(Trans);
+////		Trans.setGid(gid);
+////		Trans.setType(type);
+////		Trans.setUserName(userName);
+//		if (result != 0) {
+//			request.setAttribute("success", "删除成功");
+//			return "redirect:/Trans/list";
+//		} else {
+//			request.setAttribute("error", "删除失败");
+//			return "redirect:/Trans/list";
+//		}
+//	}
 }

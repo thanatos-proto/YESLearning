@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 /**
- * Created by moonwolfzy on 2017-12-18.
+ * Created by moonwolfzy on 2017-12-25.
  */
 @Entity
 public class Courses {

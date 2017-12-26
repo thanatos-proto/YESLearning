@@ -29,5 +29,8 @@
         <property name="tName">
             <column name="TName" sql-type="text" not-null="true"/>
         </property>
+        <property name="tNum">
+            <column name="TNum" sql-type="int(11)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

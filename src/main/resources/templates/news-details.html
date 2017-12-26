@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" >
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8"/>
+    <meta name="description" content="YES网络教学平台"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>EduCamp - LMS Template for Courses &amp; Education</title>
+    <title>YES网络教学平台</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../static/img/core-img/favicon.ico">
+    <link rel="shortcut icon" th:href="@{img/core-img/favicon.ico}"/>
 
     <!-- ===================== All CSS Files ===================== -->
+
     <!-- Bootstrap Core CSS -->
     <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
 
@@ -24,168 +24,115 @@
     <!-- Responsive css -->
     <link rel="stylesheet" th:href="@{css/responsive.css}"/>
 
-
 </head>
 
 <body>
-    <!-- preloader start -->
-    <div id="preloader"></div>
-    <!-- /.end preloader -->
+<!-- preloader start -->
+<div id="preloader"></div>
+<!-- /.end preloader -->
 
-    <!-- Header Area Start -->
-    <header class="header_area">
-        <!-- Top Header Area Start -->
-        <div class="top_header_area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md">
-                        <!--  Top Quote Area Start -->
-                        <div class="top_quote">
-                            <p>Welcome to EduCamp LMS Platform</p>
-                        </div>
+<!-- Header Area Start -->
+<header class="header_area">
+    <!-- Top Header Area Start -->
+    <div class="top_header_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <!--  Top Quote Area Start -->
+                    <div class="top_quote">
+                        <p>Welcome to YES Learning Platform</p>
                     </div>
-                    <div class="col-md">
-                        <div class="login_language_area d-flex align-items-center float-right">
-                            <!-- Login Register Area Start -->
-                            <div class="login_register">
-                                <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> Login/Register</a>
-                            </div>
-                            <!-- Language Area Start -->
-                            <div class="language_area">
-                                <div class="dropdown">
-                                    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i> Language</button>
-                                    <ul aria-labelledby="lag" class="dropdown-menu">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">हिन्दी</a></li>
-                                        <li><a href="#">বাংলা</a></li>
-                                    </ul>
-                                </div>
+                </div>
+                <div class="col-md">
+                    <div class="login_language_area d-flex align-items-center float-right">
+                        <!-- Login Register Area Start -->
+                        <div class="login_register">
+                            <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> 登录 / 注册</a>
+                        </div>
+                        <!-- Language Area Start -->
+                        <div class="language_area">
+                            <div class="dropdown">
+                                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i>语言</button>
+                                <ul aria-labelledby="lag" class="dropdown-menu">
+                                    <li><a href="#">中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">বাংলা</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Main Header Area Start -->
-        <div class="main_header_area animated">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <!-- Logo Area -->
-                        <div class="logo_area">
-                            <a href="index.html"><img src="../static/img/core-img/logo.png" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-9">
-                        <!-- Menu Area -->
-                        <div class="main_menu_area">
-                            <div class="mainmenu">
-                                <nav>
-                                    <ul id="nav">
-                                        <li class="current_page_item"><a href="index.html">Home</a></li>
-                                        <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Home Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="index.html">Home-1</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Other Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="about-us.html">About Us</a></li>
-                                                        <li><a href="code-of-contact.html">Code of Contact</a></li>
-                                                        <li><a href="knowledgebase.html">Knowledgebase</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="register.html">register</a></li>
-                                                        <li><a href="404.html">404 Not Found</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Blog Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog.html">Blog - 1</a></li>
-                                                        <li><a href="blog-sidebar.html">Blog - 2</a></li>
-                                                        <li><a href="single.html">Single Blog - 1</a></li>
-                                                        <li><a href="single-sidebar.html">Single Blog - 2</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Event Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="event-grid.html">Event Grid</a></li>
-                                                        <li><a href="event-list.html">Event List</a></li>
-                                                        <li><a href="event-details.html">Event Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Gallery Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
-                                                        <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
-                                                        <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
-                                                        <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Course Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="course-grid.html">Course Grid</a></li>
-                                                        <li><a href="course-list.html">Course List</a></li>
-                                                        <li><a href="course-details.html">Course Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Teacher Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="teachers.html">Teacher Grid</a></li>
-                                                        <li><a href="teachers-details.html">Teacher Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
-                                                <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
-                                                <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
-                                                <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">course<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course-grid.html">Course Grid</a></li>
-                                                <li><a href="course-list.html">Course List</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">teacher<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="teachers.html">Teachers</a></li>
-                                                <li><a href="teachers-details.html">Teacher Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Event<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event-grid.html">Event Grid</a></li>
-                                                <li><a href="event-list.html">Event List</a></li>
-                                                <li><a href="event-details.html">Event Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--  ===================== Header Area End ===================== -->
-
-    <!-- Breadcumb area start -->
-    <section class="breadcumb_area" style="background-image: url(../static/img/bg-pattern/breadcumb.jpg);">
+    <!-- Main Header Area Start -->
+    <div class="main_header_area animated">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-md-3">
+                    <!-- Logo Area -->
+                    <div class="logo_area">
+                        <a href="index.html"><img th:src="@{img/core-img/logo.png}" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-9">
+                    <!-- Menu Area -->
+                    <div class="main_menu_area">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul id="nav">
+                                    <li class="current_page_item"><a href="index.html">主页</a></li>
+                                    <li><a href="#">公告文章<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="news.html">新闻列表 </a></li>
+                                            <li><a href="artical.html">专栏文章 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">最新活动<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="event-grid.html">活动列表 Grid</a></li>
+                                            <li><a href="event-list.html">活动列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">课程超市<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course-grid.html">课程列表 Grid</a></li>
+                                            <li><a href="course-list.html">课程列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">图片游廊<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="gallery-fullwidth.html">展示 Fullwidth</a></li>
+                                            <li><a href="gallery-4-column.html">展示 4 Column</a></li>
+                                            <li><a href="gallery-3-column.html">展示 3 Column</a></li>
+                                            <li><a href="gallery-2-column.html">展示 2 Column</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">师资力量<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="teachers.html">教师列表</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">联系我们</a></li>
+                                    <button type="submit" class="btn btn-default" id="login_submit">学习空间</button>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--  ===================== Header Area End ===================== -->
+
+<!-- Breadcumb area start -->
+    <section class="breadcumb_area" style="background-image: url(img/bg-pattern/breadcumb.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
                     <div class="breadcumb_section">
                         <!-- Breadcumb page title start -->
                         <div class="page_title">
@@ -210,10 +157,10 @@
     <section class="singl-blog-post-area">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12">
                     <!-- Blog Main Image -->
                     <div class="blog-img">
-                        <img src="../static/img/bg-pattern/tes-bg.jpg" alt="blog-img">
+                        <img th:src = "@{img/bg-pattern/tes-bg.jpg}" alt="blog-img">
                     </div>
                     <div class="singl-blog-post">
                         <figure>
@@ -223,13 +170,25 @@
                             </div>
                             <!-- Blog Status Bar Area -->
                             <div class="singl-blog-status-bar">
-                                <span><i class="fa fa-user"></i><a href="">Nazrul Islam</a></span>
-                                <span><i class="fa fa-clock-o"></i><a href="">31 Aug, 2016</a></span>
-                                <span><i class="fa fa-folder-o"></i><a href="">Web Design</a></span>
-                                <span><i class="fa fa-comment-o "></i><a href="#comment">8 Comments</a></span>
+                                <span>
+										<i class="fa fa-user"></i>
+										<a href="">Nazrul Islam</a>
+									</span>
+                                <span>
+										<i class="fa fa-clock-o"></i>
+										<a href="">31 Aug, 2016</a>
+									</span>
+                                <span>
+										<i class="fa fa-folder-o"></i>
+										<a href="">Web Design</a>
+									</span>
+                                <span>
+										<i class="fa fa-comment-o "></i>
+										<a href="#comment">8 Comments</a>
+									</span>
                             </div>
                             <!-- Single Blog Details Area -->
-                            <div class="singl-blog-details">
+                            <div class="singl-blog-details text-justify">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco off a laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non home roident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae to vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.ut labore et dolore magnam aliquam quaerat voluptatem.</p>
                                 <blockquote>
@@ -263,77 +222,15 @@
                         </figure>
                     </div>
                 </div>
-
-                <div class="col-12 col-lg-3">
-                    <div class="event_sidebar">
-                        <div class="search_post">
-                            <h3>Search <span>Post</span></h3>
-                            <form action="#">
-                                <input type="search" placeholder="Enter Keyword...">
-                            </form>
-                        </div>
-                        <div class="achive_section">
-                            <h3>Achives</h3>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>July - 2016</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>August - 2016</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>September - 2016</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>October - 2016</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>November - 2016</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>December - 2016</a></li>
-                            </ul>
-                        </div>
-                        <div class="latest_post">
-                            <h3>Recent <span>Post</span></h3>
-                            <div class="single_latest_post">
-                                <img src="../static/img/course-img/event-1.jpg" alt="">
-                                <a href="#"><h5>7 Quick Ways to Make a Great Event Successful</h5></a>
-                                <p>25 min ago</p>
-                            </div>
-                            <div class="single_latest_post">
-                                <img src="../static/img/course-img/event-2.jpg" alt="">
-                                <a href="#"><h5>Science &amp; IT Fair Coming to Your University</h5></a>
-                                <p>48 min ago</p>
-                            </div>
-                            <div class="single_latest_post">
-                                <img src="../static/img/course-img/event-3.jpg" alt="">
-                                <a href="#"><h5>How to Pick the Right Event Titles for Your Events</h5></a>
-                                <p>55 min ago</p>
-                            </div>
-                        </div>
-                        <div class="catagory_section">
-                            <h3>Catagory <span>Tags</span></h3>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Business</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Education</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Tourist</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Workshop</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Sports</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Fine Arts</a></li>
-                            </ul>
-                        </div>
-                        <div class="tag_section">
-                            <h3>Tags <span>Cloud</span></h3>
-                            <ul>
-                                <li><a href="#">Event</a></li>
-                                <li><a href="#">Workshop</a></li>
-                                <li><a href="#">E-commerce</a></li>
-                                <li><a href="#">Web</a></li>
-                                <li><a href="#">Apps</a></li>
-                                <li><a href="#">Development</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12">
                     <div class="event_next_previous">
                         <div class="previous">
-                            <a href="#">Previous</a>
+                            <a href="#">Previous Post</a>
                         </div>
                         <div class="next">
-                            <a href="#">Next</a>
+                            <a href="#">Next Post</a>
                         </div>
                     </div>
                 </div>
@@ -346,7 +243,7 @@
     <section class="comment">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12">
                     <!-- Comment Title -->
                     <div class="comment-title">
                         <h4>2 Comments</h4></div>
@@ -355,7 +252,7 @@
                             <div class="comments-wrapper clearfix">
                                 <!-- Commenter Avater -->
                                 <div class="comment-img">
-                                    <img src="../static/img/teacher-img/team-member-2.jpg" alt="Author Pic">
+                                    <img th:src = "@{img/teacher-img/team-member-2.jpg}" alt="Author Pic">
                                 </div>
                                 <!-- Single Comment Area Start -->
                                 <div class="single-comment">
@@ -376,7 +273,7 @@
                             <div class="comments-wrapper clearfix">
                                 <!-- Commenter Avater -->
                                 <div class="comment-img">
-                                    <img class="media-object" src="../static/img/teacher-img/team-member-3.jpg" alt="Author Pic">
+                                    <img class="media-object" th:src = "@{img/teacher-img/team-member-3.jpg}" alt="Author Pic">
                                 </div>
                                 <!-- Single Comment Area Start -->
                                 <div class="single-comment">
@@ -404,7 +301,7 @@
     <section id="contact-form" class="blog_comment_form">
         <div class="container no-padding">
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12">
                     <!-- Setion Title -->
                     <div class="contact-form-title">
                         <h4>Leave a Comment</h4>
@@ -412,23 +309,23 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-9">
+                <div class="col-12">
                     <form action="#">
                         <!-- Single Input Start -->
                         <div class="row">
-                            <div class="col-12 col-md-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                                 </div>
                             </div>
                             <!-- Single Input Start -->
-                            <div class="col-12 col-md-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <input type="email" class="form-control" placeholder="E-mail Address" required>
                                 </div>
                             </div>
                             <!-- Single Input Start -->
-                            <div class="col-12 col-md-4">
+                            <div class="col-md-4 col-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Web Address (Optional)">
                                 </div>
@@ -563,18 +460,19 @@
     </footer>
     <!-- ===================== Footer Area End ===================== -->
 
-    <!-- ===================== All jQuery Plugins ===================== -->
+<!-- ===================== All jQuery Plugins ===================== -->
 
-    <!-- jQuery (necessary for all JavaScript plugins) -->
-    <script th:src="static/js/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script th:src="static/js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script th:src="static/js/static.min.js"></script>
-    <!-- Plugins js -->
-    <script th:src="static/js/plugins.js"></script>
-    <!-- Active js -->
-    <script th:src="static/js/custom.js"></script>
+<!-- jQuery (necessary for all JavaScript plugins) -->
+<script th:src="@{js/jquery-2.2.4.min.js}"></script>
+<!-- Popper js -->
+<script th:src="@{js/popper.min.js}"></script>
+<!-- Bootstrap js -->
+<script th:src="@{js/static.min.js}"></script>
+<!-- Plugins js -->
+<script th:src="@{js/plugins.js}"></script>
+<!-- Active js -->
+<script th:src="@{js/custom.js}"></script>
+
 </body>
 
 </html>

@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-18.
+ * Created by moonwolfzy on 2017-12-25.
  */
 @Entity
 public class Trans {
@@ -19,6 +19,7 @@ public class Trans {
     private Integer tState;
     private String tImage;
     private String tName;
+    private Integer tNum;
 
     @Id
     @Column(name = "TId", nullable = false)
@@ -100,6 +101,16 @@ public class Trans {
         this.tName = tName;
     }
 
+    @Basic
+    @Column(name = "TNum", nullable = true)
+    public Integer gettNum() {
+        return tNum;
+    }
+
+    public void settNum(Integer tNum) {
+        this.tNum = tNum;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -115,6 +126,7 @@ public class Trans {
         if (tState != null ? !tState.equals(trans.tState) : trans.tState != null) return false;
         if (tImage != null ? !tImage.equals(trans.tImage) : trans.tImage != null) return false;
         if (tName != null ? !tName.equals(trans.tName) : trans.tName != null) return false;
+        if (tNum != null ? !tNum.equals(trans.tNum) : trans.tNum != null) return false;
 
         return true;
     }
@@ -129,6 +141,7 @@ public class Trans {
         result = 31 * result + (tState != null ? tState.hashCode() : 0);
         result = 31 * result + (tImage != null ? tImage.hashCode() : 0);
         result = 31 * result + (tName != null ? tName.hashCode() : 0);
+        result = 31 * result + (tNum != null ? tNum.hashCode() : 0);
         return result;
     }
 }
