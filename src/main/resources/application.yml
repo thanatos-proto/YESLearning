@@ -1,0 +1,24 @@
+server:
+  port: 9002
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: utf-8
+    content-type: text/html
+    #开发时关闭缓存,不然没法看到实时页面
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #useSSL=true兼容高版本
+    url: jdbc:mysql://localhost:3306/yes?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: Mowozy
+    password: Moonwolfzy4
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #显示实时sql语句
+    show-sql: true
+  #控制其输出json字符串更美观
+  jackson:
+    serialization:
+      indent-output: true
