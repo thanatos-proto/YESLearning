@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="YES网络教学平台"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>YES网络教学平台</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" th:href="@{img/core-img/favicon.ico}"/>
+
+    <!-- ===================== All CSS Files ===================== -->
+
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+
+    <!-- Style css -->
+    <link rel="stylesheet" th:href="@{style.css}"/>
+
+    <!-- Responsive css -->
+    <link rel="stylesheet" th:href="@{css/responsive.css}"/>
+
+</head>
+
+<body>
+<!-- preloader start -->
+<div id="preloader"></div>
+<!-- /.end preloader -->
+
+<!-- Header Area Start -->
+<header class="header_area">
+    <!-- Top Header Area Start -->
+    <div class="top_header_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <!--  Top Quote Area Start -->
+                    <div class="top_quote">
+                        <p>Welcome to YES Learning Platform</p>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="login_language_area d-flex align-items-center float-right">
+                        <!-- Login Register Area Start -->
+                        <div class="login_register">
+                            <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> 登录 / 注册</a>
+                        </div>
+                        <!-- Language Area Start -->
+                        <div class="language_area">
+                            <div class="dropdown">
+                                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i>语言</button>
+                                <ul aria-labelledby="lag" class="dropdown-menu">
+                                    <li><a href="#">中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">বাংলা</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Area Start -->
+    <div class="main_header_area animated">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <!-- Logo Area -->
+                    <div class="logo_area">
+                        <a href="index.html"><img th:src="@{img/core-img/logo.png}" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-9">
+                    <!-- Menu Area -->
+                    <div class="main_menu_area">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul id="nav">
+                                    <li class="current_page_item"><a href="index.html">主页</a></li>
+                                    <li><a href="#">公告文章<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="news.html">新闻列表 </a></li>
+                                            <li><a href="artical.html">专栏文章 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">最新活动<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="event-grid.html">活动列表 Grid</a></li>
+                                            <li><a href="event-list.html">活动列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">课程超市<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course-grid.html">课程列表 Grid</a></li>
+                                            <li><a href="course-list.html">课程列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">图片游廊<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="gallery-fullwidth.html">展示 Fullwidth</a></li>
+                                            <li><a href="gallery-4-column.html">展示 4 Column</a></li>
+                                            <li><a href="gallery-3-column.html">展示 3 Column</a></li>
+                                            <li><a href="gallery-2-column.html">展示 2 Column</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">师资力量<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="teachers.html">教师列表</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">联系我们</a></li>
+                                    <button type="submit" class="btn btn-default" id="login_submit">学习空间</button>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--  ===================== Header Area End ===================== -->
+
+    <!-- ===================== Breadcumb area start ===================== -->
+    <section class="breadcumb_area" style="background-image: url(img/bg-pattern/breadcumb.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcumb_section">
+                        <!-- Breadcumb page title start -->
+                        <div class="page_title">
+                            <h3>学习空间</h3>
+                        </div>
+                        <!-- Breadcumb page pagination start -->
+                        <div class="page_pagination">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                <li>User Space</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================== Breadcumb area end ===================== -->
+
+<!-- ========================== User Space Area Start ========================== -->
+<section class="latest_blog_news_area blog sidebar section_padding_100">
+    <div class="container">
+        <div class="row">
+            <!--Left Area Start-->
+            <div class="col-12 col-lg-3">
+                <div class="event_sidebar">
+                    <div class="achive_section">
+                        <img th:src = "@{img/users-img/usersmall.png}" class="img-thumbnail" alt="" >
+                        <h3><span>慕容杰克</span></h3>
+                    </div>
+                    <div class="achive_section">
+                        <h3>个人资料</h3>
+                        <ul>
+                            <li><a href="userspace-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>浏览信息</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>管理信息</a></li>
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3>我的课程</h3>
+                        <ul>
+                            <li><a href="userspace-courses.html"><i class="fa fa-caret-right" aria-hidden="true"></i>课程进行中</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>课程已完成</a></li>
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3>我的测试</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>测试列表</a></li>
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3>最近活动</h3>
+                        <div class="single_latest_post">
+                            <img th:src = "@{img/course-img/event-1.jpg}" alt="">
+                            <a href="#">
+                                <h5>7 Quick Ways to Make a Great Event Successful</h5>
+                            </a>
+                            <p>25 min ago</p>
+                        </div>
+                        <div class="single_latest_post">
+                            <img th:src = "@{img/course-img/event-2.jpg}" alt="">
+                            <a href="#">
+                                <h5>Science &amp; IT Fair Coming to Your University</h5>
+                            </a>
+                            <p>48 min ago</p>
+                        </div>
+                        <div class="single_latest_post">
+                            <img th:src = "@{img/course-img/event-3.jpg}" alt="">
+                            <a href="#">
+                                <h5>How to Pick the Right Event Titles for Your Events</h5>
+                            </a>
+                            <p>55 min ago</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--Left Area End-->
+
+            <!--Main Area Start-->
+            <div class="col-12 col-lg-9">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-1">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <a class="navbar-brand" href="#">我的测试</a>
+                                    </div>
+                                    <div>
+                                        <li><a href="#">测试列表</a></li>
+                                        <li style="position:absolute;width:100%;left:0;border-top:dashed 1px #CCCCCC;line-height:1px;zoom:1;"></li>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- Single Courses Area Start -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <!-- Single Courses Area Start -->
+                            <div class="single_courses">
+                                <div class="single_courses_thumb">
+                                    <img th:src="@{img/course-img/c-1.jpg}" alt="">
+                                </div>
+                                <div class="single_courses_desc">
+                                    <div class="title">
+                                        <a href="userexam-index.html">测试课程Prototype_01<br>学习测试</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                                    </div>
+                                    <div class="price_rating_area d-flex align-items-center">
+                                        <div class="rating text-right w-50">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            <span>(4 Vote)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Courses Area End -->
+
+                        <!-- Single Courses Area Start -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <!-- Single Courses Area Start -->
+                            <div class="single_courses">
+                                <div class="single_courses_thumb">
+                                    <img th:src="@{img/course-img/c-2.jpg}" alt="">
+                                </div>
+                                <div class="single_courses_desc">
+                                    <div class="title">
+                                        <a href="#">Introduction to Family Engagement in Education</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                                    </div>
+                                    <div class="price_rating_area d-flex align-items-center">
+                                        <div class="rating text-right w-50">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            <span>(4 Vote)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Courses Area End -->
+
+                        <!-- Single Courses Area Start -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <!-- Single Courses Area Start -->
+                            <div class="single_courses">
+                                <div class="single_courses_thumb">
+                                    <img th:src="@{img/course-img/c-3.jpg}" alt="">
+                                </div>
+                                <div class="single_courses_desc">
+                                    <div class="title">
+                                        <a href="#">Introduction to Family Engagement in Education</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                                    </div>
+                                    <div class="price_rating_area d-flex align-items-center">
+                                        <div class="rating text-right w-50">
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            <span>(4 Vote)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Courses Area End -->
+                    </div>
+                </div>
+            </div>
+            <!--Main Area End-->
+
+        </div>
+    </div>
+
+</section>
+<!-- ========================== User Space Area End ========================== -->
+    <!-- ===================== Footer Area Start ===================== -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="section_padding_100_70">
+                <div class="row">
+                    <!-- Footer About Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="footer_about_us footer-single-part">
+                            <div class="title">
+                                <h4>About EduCamp</h4>
+                                <!-- Useful Links Title -->
+                                <div class="underline"></div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nostrum, illum quod facilis minima natus adipisci, fugit provident! Totam ipsam, ullam aut. Autem, corporis, tenetur.</p>
+                            <div class="footer_social_links">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer About Area End -->
+
+                    <!-- Contact info Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="footer_contact_info footer-single-part">
+                            <div class="title">
+                                <h4>get in touch</h4>
+                                <!-- Useful Links Title -->
+                                <div class="underline"></div>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                                <p>House - 87, Mirpur DOHS, Dhaka, Bangladesh</p>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+8801791166123">+88 698 257 14520</a>
+                                <a href="tel:+8801791166123">+88 698 257 14521</a>
+                            </div>
+                            <!-- single contact info start -->
+                            <div class="footer_single_contact_info">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <a href="mailto:info@educamp.com">info@educamp.com</a>
+                                <a href="mailto:care@educamp.com">care@educamp.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contact info Area End -->
+
+                    <!-- Useful Links Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="important_links footer-single-part">
+                            <div class="title">
+                                <h4>useful links</h4>
+                                <div class="underline"></div>
+                            </div>
+                            <!-- Links Start -->
+                            <div class="links">
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> All Our Courses</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Event Calendar</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Customer Support</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Career at EduCamp</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Terms &amp; Conditions</a>
+                                <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Community Forums</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Useful Links Area Start -->
+                    <div class="col-12 col-md-6 col-lg">
+                        <div class="important_links footer-single-part">
+                            <div class="title">
+                                <h4>Subscribe Newsletter</h4>
+                                <div class="underline"></div>
+                            </div>
+                            <div class="newsletter_from">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Your E-mail" required>
+                                    </div>
+                                    <button type="submit" class="btn blog-btn w-100">Submit <i class="fa fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area Start -->
+        <div class="footer_bottom_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer_bottom">
+                            <p>Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="#">Designing World</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ===================== Footer Area End ===================== -->
+    <!-- ===================== All jQuery Plugins ===================== -->
+
+    <!-- jQuery (necessary for all JavaScript plugins) -->
+    <script th:src="@{js/jquery-2.2.4.min.js}"></script>
+    <!-- Popper js -->
+    <script th:src="@{js/popper.min.js}"></script>
+    <!-- Bootstrap js -->
+    <script th:src="@{js/static.min.js}"></script>
+    <!-- Plugins js -->
+    <script th:src="@{js/plugins.js}"></script>
+    <!-- Active js -->
+    <script th:src="@{js/custom.js}"></script>
+
+</body>
+
+</html>

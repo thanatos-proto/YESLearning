@@ -30,7 +30,10 @@
             <column name="Answer6" sql-type="text" not-null="true"/>
         </property>
         <property name="correct">
-            <column name="Correct" sql-type="text" not-null="true"/>
+            <column name="Correct" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="score">
+            <column name="score" sql-type="int(11)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

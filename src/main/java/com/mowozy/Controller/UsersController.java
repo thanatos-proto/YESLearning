@@ -34,9 +34,6 @@ public class UsersController {
         return "register";
     }
 
-    @RequestMapping("users-details")String userDetails(Model model){
-        return "users-details";
-    }
 
     @RequestMapping(value = "/userLogin", method = RequestMethod.POST)
     String userLogin(Users user, Model model,HttpServletRequest request) {
@@ -52,9 +49,7 @@ public class UsersController {
 
     }
 
-    @RequestMapping("userspace")String userspace(Model model){
-        return "userspace";
-    }
+
 
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
     String registerUser(Users user, Model model) {
@@ -71,6 +66,25 @@ public class UsersController {
             return "registerFail";
         }
 
+    }
+
+    @RequestMapping("userspace")String userspace(Model model){
+        return "userspace";
+    }
+
+    @RequestMapping("userspace-details")String userspaceDetails(Model model){
+
+        return "userspace-details";
+    }
+
+    @RequestMapping("userspace-courses")String userspaceCourses(Model model)
+    {
+        return "userspace-courses";
+    }
+
+    @RequestMapping("userspace-exam")String userspaceExam(Model model)
+    {
+        return "userspace-exam";
     }
 
 
