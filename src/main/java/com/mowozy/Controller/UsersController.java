@@ -77,6 +77,10 @@ public class UsersController {
         return "userspace-details";
     }
 
+    @RequestMapping("userspace-modify")String userspacemodify(Model model){
+
+        return "userspace-modify";
+    }
     @RequestMapping("userspace-courses")String userspaceCourses(Model model)
     {
         return "userspace-courses";
