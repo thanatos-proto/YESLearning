@@ -7,17 +7,19 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-25.
  */
 @Entity
 public class Trans {
     private int tId;
-    private Integer uId;
     private Timestamp tStartDate;
     private Integer tuId;
     private Integer tPrice;
     private Timestamp tEndDate;
     private Integer tState;
+    private String tImage;
+    private String tName;
+    private Integer tNum;
 
     @Id
     @Column(name = "TId", nullable = false)
@@ -27,16 +29,6 @@ public class Trans {
 
     public void settId(int tId) {
         this.tId = tId;
-    }
-
-    @Basic
-    @Column(name = "UId", nullable = true)
-    public Integer getuId() {
-        return uId;
-    }
-
-    public void setuId(Integer uId) {
-        this.uId = uId;
     }
 
     @Basic
@@ -89,6 +81,36 @@ public class Trans {
         this.tState = tState;
     }
 
+    @Basic
+    @Column(name = "TImage", nullable = true, length = -1)
+    public String gettImage() {
+        return tImage;
+    }
+
+    public void settImage(String tImage) {
+        this.tImage = tImage;
+    }
+
+    @Basic
+    @Column(name = "TName", nullable = true, length = -1)
+    public String gettName() {
+        return tName;
+    }
+
+    public void settName(String tName) {
+        this.tName = tName;
+    }
+
+    @Basic
+    @Column(name = "TNum", nullable = true)
+    public Integer gettNum() {
+        return tNum;
+    }
+
+    public void settNum(Integer tNum) {
+        this.tNum = tNum;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -97,12 +119,14 @@ public class Trans {
         Trans trans = (Trans) o;
 
         if (tId != trans.tId) return false;
-        if (uId != null ? !uId.equals(trans.uId) : trans.uId != null) return false;
         if (tStartDate != null ? !tStartDate.equals(trans.tStartDate) : trans.tStartDate != null) return false;
         if (tuId != null ? !tuId.equals(trans.tuId) : trans.tuId != null) return false;
         if (tPrice != null ? !tPrice.equals(trans.tPrice) : trans.tPrice != null) return false;
         if (tEndDate != null ? !tEndDate.equals(trans.tEndDate) : trans.tEndDate != null) return false;
         if (tState != null ? !tState.equals(trans.tState) : trans.tState != null) return false;
+        if (tImage != null ? !tImage.equals(trans.tImage) : trans.tImage != null) return false;
+        if (tName != null ? !tName.equals(trans.tName) : trans.tName != null) return false;
+        if (tNum != null ? !tNum.equals(trans.tNum) : trans.tNum != null) return false;
 
         return true;
     }
@@ -110,12 +134,14 @@ public class Trans {
     @Override
     public int hashCode() {
         int result = tId;
-        result = 31 * result + (uId != null ? uId.hashCode() : 0);
         result = 31 * result + (tStartDate != null ? tStartDate.hashCode() : 0);
         result = 31 * result + (tuId != null ? tuId.hashCode() : 0);
         result = 31 * result + (tPrice != null ? tPrice.hashCode() : 0);
         result = 31 * result + (tEndDate != null ? tEndDate.hashCode() : 0);
         result = 31 * result + (tState != null ? tState.hashCode() : 0);
+        result = 31 * result + (tImage != null ? tImage.hashCode() : 0);
+        result = 31 * result + (tName != null ? tName.hashCode() : 0);
+        result = 31 * result + (tNum != null ? tNum.hashCode() : 0);
         return result;
     }
 }

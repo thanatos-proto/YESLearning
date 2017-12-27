@@ -23,8 +23,8 @@
         <property name="email">
             <column name="Email" sql-type="text" not-null="true"/>
         </property>
-        <property name="name">
-            <column name="name" sql-type="text" not-null="true"/>
+        <property name="uName">
+            <column name="UName" sql-type="text" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

@@ -8,9 +8,6 @@
         <id name="tId">
             <column name="TId" sql-type="int(11)"/>
         </id>
-        <property name="uId">
-            <column name="UId" sql-type="int(11)" not-null="true"/>
-        </property>
         <property name="tStartDate">
             <column name="TStartDate" sql-type="datetime" not-null="true"/>
         </property>
@@ -25,6 +22,15 @@
         </property>
         <property name="tState">
             <column name="TState" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="tImage">
+            <column name="TImage" sql-type="text" not-null="true"/>
+        </property>
+        <property name="tName">
+            <column name="TName" sql-type="text" not-null="true"/>
+        </property>
+        <property name="tNum">
+            <column name="TNum" sql-type="int(11)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

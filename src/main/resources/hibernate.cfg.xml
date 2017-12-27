@@ -24,20 +24,21 @@
         <mapping resource="com/mowozy/Entity/Appearances.hbm.xml"/>
         <mapping resource="com/mowozy/Entity/Courses.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Courses"/>
-        <mapping resource="com/mowozy/Entity/Exams.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Exams"/>
-        <mapping resource="com/mowozy/Entity/Grades.hbm.xml"/>
+        <mapping resource="com/mowozy/Entity/Exams.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Grades"/>
-        <mapping resource="com/mowozy/Entity/Questions.hbm.xml"/>
-        <mapping class="com.mowozy.Entity.Questions"/>
-        <mapping resource="com/mowozy/Entity/Trans.hbm.xml"/>
+        <mapping resource="com/mowozy/Entity/Grades.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Trans"/>
+        <mapping resource="com/mowozy/Entity/Trans.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Users"/>
         <mapping resource="com/mowozy/Entity/Users.hbm.xml"/>
-        <mapping resource="com/mowozy/Entity/Usersappearance.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Usersappearance"/>
-        <mapping resource="com/mowozy/Entity/Userscourses.hbm.xml"/>
+        <mapping resource="com/mowozy/Entity/Usersappearance.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Userscourses"/>
+        <mapping resource="com/mowozy/Entity/Userscourses.hbm.xml"/>
+        <mapping resource="com/mowozy/Entity/Questions.hbm.xml"/>
+        <mapping class="com.mowozy.Entity.Questions"/>
+
                         <!-- Drop and re-create the database schema on startup -->
                 <!--
         <property name="hbm2ddl.auto">update</property>

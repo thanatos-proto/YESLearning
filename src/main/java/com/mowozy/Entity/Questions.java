@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-27.
  */
 @Entity
 public class Questions {
@@ -18,7 +18,8 @@ public class Questions {
     private String answer4;
     private String answer5;
     private String answer6;
-    private String correct;
+    private Integer correct;
+    private Integer score;
 
     @Id
     @Column(name = "QId", nullable = false)
@@ -101,12 +102,12 @@ public class Questions {
     }
 
     @Basic
-    @Column(name = "Correct", nullable = true, length = -1)
-    public String getCorrect() {
+    @Column(name = "Correct", nullable = true)
+    public Integer getCorrect() {
         return correct;
     }
 
-    public void setCorrect(String correct) {
+    public void setCorrect(Integer correct) {
         this.correct = correct;
     }
 
@@ -142,5 +143,15 @@ public class Questions {
         result = 31 * result + (answer6 != null ? answer6.hashCode() : 0);
         result = 31 * result + (correct != null ? correct.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "score", nullable = true)
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
     }
 }

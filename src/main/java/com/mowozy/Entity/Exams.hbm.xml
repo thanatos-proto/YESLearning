@@ -8,6 +8,9 @@
         <id name="eId">
             <column name="EId" sql-type="int(11)"/>
         </id>
+        <property name="cId">
+            <column name="CId" sql-type="int(11)"/>
+        </property>
         <property name="q1">
             <column name="Q1" sql-type="int(11)" not-null="true"/>
         </property>
@@ -41,11 +44,14 @@
         <property name="total">
             <column name="Total" sql-type="int(11)" not-null="true"/>
         </property>
-        <property name="eStartDate">
-            <column name="EStartDate" sql-type="datetime" not-null="true"/>
+        <property name="eendDate">
+            <column name="eend_date" sql-type="datetime" not-null="true"/>
         </property>
-        <property name="eEndDate">
-            <column name="EEndDate" sql-type="datetime" not-null="true"/>
+        <property name="estartDate">
+            <column name="estart_date" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="eName">
+            <column name="EName" sql-type="text" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

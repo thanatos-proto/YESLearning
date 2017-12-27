@@ -18,7 +18,10 @@
             <column name="CName" sql-type="text" not-null="true"/>
         </property>
         <property name="cPrice">
-            <column name="CPrice" sql-type="float(8,2)" precision="8" scale="2" not-null="true"/>
+            <column name="CPrice" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="cImage">
+            <column name="CImage" sql-type="text" not-null="true"/>
         </property>
         <property name="cPath">
             <column name="CPath" sql-type="text" not-null="true"/>

@@ -1,185 +1,133 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" >
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8"/>
+    <meta name="description" content="YES网络教学平台"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>EduCamp - LMS Template for Courses &amp; Education</title>
+    <title>YES网络教学平台</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../static/img/core-img/favicon.ico">
+    <link rel="shortcut icon" th:href="@{img/core-img/favicon.ico}"/>
 
     <!-- ===================== All CSS Files ===================== -->
 
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+
     <!-- Style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" th:href="@{style.css}"/>
 
     <!-- Responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" th:href="@{css/responsive.css}"/>
 
 </head>
 
 <body>
-    <!-- preloader start -->
-    <div id="preloader"></div>
-    <!-- /.end preloader -->
+<!-- preloader start -->
+<div id="preloader"></div>
+<!-- /.end preloader -->
 
-    <!-- Header Area Start -->
-    <header class="header_area">
-        <!-- Top Header Area Start -->
-        <div class="top_header_area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md">
-                        <!--  Top Quote Area Start -->
-                        <div class="top_quote">
-                            <p>Welcome to EduCamp LMS Platform</p>
-                        </div>
+<!-- Header Area Start -->
+<header class="header_area">
+    <!-- Top Header Area Start -->
+    <div class="top_header_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md">
+                    <!--  Top Quote Area Start -->
+                    <div class="top_quote">
+                        <p>Welcome to YES Learning Platform</p>
                     </div>
-                    <div class="col-md">
-                        <div class="login_language_area d-flex align-items-center float-right">
-                            <!-- Login Register Area Start -->
-                            <div class="login_register">
-                                <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> Login/Register</a>
-                            </div>
-                            <!-- Language Area Start -->
-                            <div class="language_area">
-                                <div class="dropdown">
-                                    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i> Language</button>
-                                    <ul aria-labelledby="lag" class="dropdown-menu">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">हिन्दी</a></li>
-                                        <li><a href="#">বাংলা</a></li>
-                                    </ul>
-                                </div>
+                </div>
+                <div class="col-md">
+                    <div class="login_language_area d-flex align-items-center float-right">
+                        <!-- Login Register Area Start -->
+                        <div class="login_register">
+                            <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> 登录 / 注册</a>
+                        </div>
+                        <!-- Language Area Start -->
+                        <div class="language_area">
+                            <div class="dropdown">
+                                <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i>语言</button>
+                                <ul aria-labelledby="lag" class="dropdown-menu">
+                                    <li><a href="#">中文</a></li>
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">বাংলা</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Main Header Area Start -->
-        <div class="main_header_area animated">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <!-- Logo Area -->
-                        <div class="logo_area">
-                            <a href="index.html"><img src="../static/img/core-img/logo.png" alt=""></a>
-                        </div>
+    <!-- Main Header Area Start -->
+    <div class="main_header_area animated">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <!-- Logo Area -->
+                    <div class="logo_area">
+                        <a href="index.html"><img th:src="@{img/core-img/logo.png}" alt=""></a>
                     </div>
+                </div>
 
-                    <div class="col-12 col-md-9">
-                        <!-- Menu Area -->
-                        <div class="main_menu_area">
-                            <div class="mainmenu">
-                                <nav>
-                                    <ul id="nav">
-                                        <li class="current_page_item"><a href="index.html">Home</a></li>
-                                        <li><a href="#">pages<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Home Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="index.html">Home-1</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Other Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="about-us.html">About Us</a></li>
-                                                        <li><a href="code-of-contact.html">Code of Contact</a></li>
-                                                        <li><a href="knowledgebase.html">Knowledgebase</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="register.html">register</a></li>
-                                                        <li><a href="404.html">404 Not Found</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Blog Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="blog.html">Blog - 1</a></li>
-                                                        <li><a href="blog-sidebar.html">Blog - 2</a></li>
-                                                        <li><a href="single.html">Single Blog - 1</a></li>
-                                                        <li><a href="single-sidebar.html">Single Blog - 2</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Event Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="event-grid.html">Event Grid</a></li>
-                                                        <li><a href="event-list.html">Event List</a></li>
-                                                        <li><a href="event-details.html">Event Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Gallery Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
-                                                        <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
-                                                        <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
-                                                        <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Course Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="course-grid.html">Course Grid</a></li>
-                                                        <li><a href="course-list.html">Course List</a></li>
-                                                        <li><a href="course-details.html">Course Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Teacher Pages<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="teachers.html">Teacher Grid</a></li>
-                                                        <li><a href="teachers-details.html">Teacher Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact Page</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Gallery<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="gallery-fullwidth.html">Gallery Fullwidth</a></li>
-                                                <li><a href="gallery-4-column.html">Gallery 4 Column</a></li>
-                                                <li><a href="gallery-3-column.html">Gallery 3 Column</a></li>
-                                                <li><a href="gallery-2-column.html">Gallery 2 Column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">course<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course-grid.html">Course Grid</a></li>
-                                                <li><a href="course-list.html">Course List</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">teacher<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="teachers.html">Teachers</a></li>
-                                                <li><a href="teachers-details.html">Teacher Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Event<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event-grid.html">Event Grid</a></li>
-                                                <li><a href="event-list.html">Event List</a></li>
-                                                <li><a href="event-details.html">Event Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
+                <div class="col-12 col-md-9">
+                    <!-- Menu Area -->
+                    <div class="main_menu_area">
+                        <div class="mainmenu">
+                            <nav>
+                                <ul id="nav">
+                                    <li class="current_page_item"><a href="index.html">主页</a></li>
+                                    <li><a href="#">公告文章<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="news.html">新闻列表 </a></li>
+                                            <li><a href="artical.html">专栏文章 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">最新活动<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="event-grid.html">活动列表 Grid</a></li>
+                                            <li><a href="event-list.html">活动列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">课程超市<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="course-grid.html">课程列表 Grid</a></li>
+                                            <li><a href="course-list.html">课程列表 List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">图片游廊<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="gallery-fullwidth.html">展示 Fullwidth</a></li>
+                                            <li><a href="gallery-3-column.html">展示 3 Column</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">师资力量<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="teachers.html">教师列表</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">联系我们</a></li>
+                                    <button type="submit" class="btn btn-default" id="login_submit">学习空间</button>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!--  ===================== Header Area End ===================== -->
+    </div>
+</header>
+<!--  ===================== Header Area End ===================== -->
 
-    <!-- Breadcumb area start -->
-    <section class="breadcumb_area" style="background-image: url(../static/img/bg-pattern/breadcumb.jpg);">
+<!-- Breadcumb area start -->
+    <section class="breadcumb_area" style="background-image: url(img/bg-pattern/breadcumb.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -215,7 +163,40 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-1.jpg" alt="">
+                            <img th:src="@{img/course-img/c-1.jpg}" alt="">
+                        </div>
+                        <div class="single_courses_desc">
+                            <div class="title">
+                                <a href="course-details.html">Introduction to Family Engagement in Education</a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
+                            </div>
+                            <div class="price_rating_area d-flex align-items-center">
+                                <div class="price w-50">
+                                    <span>$199</span>
+                                </div>
+                                <div class="rating text-right w-50">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    <span>(4 Vote)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Courses Area End -->
+                
+                <!-- Single Courses Area Start -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Single Courses Area Start -->
+                    <div class="single_courses">
+                        <div class="single_courses_thumb">
+                            <div class="courses_badge">
+                                <span>New</span>
+                            </div>
+                            <img th:src="@{img/course-img/c-2.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -248,7 +229,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-2.jpg" alt="">
+                            <img th:src="@{img/course-img/c-3.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -281,7 +262,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-3.jpg" alt="">
+                            <img th:src="@{img/course-img/c-4.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -314,7 +295,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-4.jpg" alt="">
+                            <img th:src="@{img/course-img/c-1.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -347,7 +328,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-1.jpg" alt="">
+                            <img th:src="@{img/course-img/c-2.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -380,7 +361,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-2.jpg" alt="">
+                            <img th:src="@{img/course-img/c-3.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -413,7 +394,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-3.jpg" alt="">
+                            <img th:src="@{img/course-img/c-4.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -446,40 +427,7 @@
                             <div class="courses_badge">
                                 <span>New</span>
                             </div>
-                            <img src="../static/img/course-img/c-4.jpg" alt="">
-                        </div>
-                        <div class="single_courses_desc">
-                            <div class="title">
-                                <a href="#">Introduction to Family Engagement in Education</a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, excepturi!</p>
-                            </div>
-                            <div class="price_rating_area d-flex align-items-center">
-                                <div class="price w-50">
-                                    <span>$199</span>
-                                </div>
-                                <div class="rating text-right w-50">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                                    <span>(4 Vote)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Courses Area End -->
-                
-                <!-- Single Courses Area Start -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <!-- Single Courses Area Start -->
-                    <div class="single_courses">
-                        <div class="single_courses_thumb">
-                            <div class="courses_badge">
-                                <span>New</span>
-                            </div>
-                            <img src="../static/img/course-img/c-1.jpg" alt="">
+                            <img th:src="@{img/course-img/c-1.jpg}" alt="">
                         </div>
                         <div class="single_courses_desc">
                             <div class="title">
@@ -538,7 +486,7 @@
                     <div class="col-12 col-md-6 col-lg">
                         <div class="footer_about_us footer-single-part">
                             <div class="title">
-                                <h4>About EduCamp</h4>
+                                <h4>关于YES</h4>
                                 <!-- Useful Links Title -->
                                 <div class="underline"></div>
                             </div>
@@ -558,7 +506,7 @@
                     <div class="col-12 col-md-6 col-lg">
                         <div class="footer_contact_info footer-single-part">
                             <div class="title">
-                                <h4>get in touch</h4>
+                                <h4>联系我们</h4>
                                 <!-- Useful Links Title -->
                                 <div class="underline"></div>
                             </div>
@@ -587,7 +535,7 @@
                     <div class="col-12 col-md-6 col-lg">
                         <div class="important_links footer-single-part">
                             <div class="title">
-                                <h4>useful links</h4>
+                                <h4>友情链接</h4>
                                 <div class="underline"></div>
                             </div>
                             <!-- Links Start -->
@@ -606,7 +554,7 @@
                     <div class="col-12 col-md-6 col-lg">
                         <div class="important_links footer-single-part">
                             <div class="title">
-                                <h4>Subscribe Newsletter</h4>
+                                <h4>发送Email</h4>
                                 <div class="underline"></div>
                             </div>
                             <div class="newsletter_from">
@@ -642,16 +590,16 @@
     <!-- ===================== All jQuery Plugins ===================== -->
 
     <!-- jQuery (necessary for all JavaScript plugins) -->
-
-    <script th:src="static/js/jquery-2.2.4.min.js"></script>
+    <script th:src="@{js/jquery-2.2.4.min.js}"></script>
     <!-- Popper js -->
-    <script th:src="static/js/popper.min.js"></script>
+    <script th:src="@{js/popper.min.js}"></script>
     <!-- Bootstrap js -->
-    <script th:src="static/js/static.min.js"></script>
+    <script th:src="@{js/static.min.js}"></script>
     <!-- Plugins js -->
-    <script th:src="static/js/plugins.js"></script>
+    <script th:src="@{js/plugins.js}"></script>
     <!-- Active js -->
-    <script th:src="static/js/custom.js"></script>
+    <script th:src="@{js/custom.js}"></script>
+
 </body>
 
 </html>

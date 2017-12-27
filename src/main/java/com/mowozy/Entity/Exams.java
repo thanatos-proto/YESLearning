@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.sql.Timestamp;
 
 /**
- * Created by moonwolfzy on 2017-12-13.
+ * Created by moonwolfzy on 2017-12-25.
  */
 @Entity
 public class Exams {
@@ -25,6 +25,8 @@ public class Exams {
     private Integer total;
     private Timestamp eStartDate;
     private Timestamp eEndDate;
+    private int cId;
+    private String eName;
 
     @Id
     @Column(name = "EId", nullable = false)
@@ -208,5 +210,25 @@ public class Exams {
         result = 31 * result + (eStartDate != null ? eStartDate.hashCode() : 0);
         result = 31 * result + (eEndDate != null ? eEndDate.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "CId", nullable = false)
+    public int getcId() {
+        return cId;
+    }
+
+    public void setcId(int cId) {
+        this.cId = cId;
+    }
+
+    @Basic
+    @Column(name = "EName", nullable = true, length = -1)
+    public String geteName() {
+        return eName;
+    }
+
+    public void seteName(String eName) {
+        this.eName = eName;
     }
 }
