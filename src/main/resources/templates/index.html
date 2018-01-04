@@ -1,29 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" >
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="YES网络教学平台"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title -->
-    <title>YES网络教学平台</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" th:href="@{img/core-img/favicon.ico}"/>
-
-    <!-- ===================== All CSS Files ===================== -->
-
-    <!-- Bootstrap Core CSS -->
-    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
-
-    <!-- Style css -->
-    <link rel="stylesheet" th:href="@{style.css}"/>
-
-    <!-- Responsive css -->
-    <link rel="stylesheet" th:href="@{css/responsive.css}"/>
-
+<head th:replace="include-content :: head">
 </head>
 
 <body>
@@ -32,99 +9,7 @@
     <!-- /.end preloader -->
 
     <!-- Header Area Start -->
-    <header class="header_area">
-        <!-- Top Header Area Start -->
-        <div class="top_header_area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md">
-                        <!--  Top Quote Area Start -->
-                        <div class="top_quote">
-                            <p>Welcome to YES Learning Platform</p>
-                        </div>
-                    </div>
-                    <div class="col-md">
-                        <div class="login_language_area d-flex align-items-center float-right">
-                            <!-- Login Register Area Start -->
-                            <div class="login_register">
-                                <a href="login.html"><i class="fa fa-lock" aria-hidden="true"></i> 登录 / 注册</a>
-                            </div>
-                            <!-- Language Area Start -->
-                            <div class="language_area">
-                                <div class="dropdown">
-                                    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" id="lag" type="button" class="btn btn-default dropdown-toggle"><i class="fa fa-globe" aria-hidden="true"></i>语言</button>
-                                    <ul aria-labelledby="lag" class="dropdown-menu">
-                                        <li><a href="#">中文</a></li>
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">বাংলা</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Header Area Start -->
-        <div class="main_header_area animated">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-3">
-                        <!-- Logo Area -->
-                        <div class="logo_area">
-                            <a href="index.html"><img th:src="@{img/core-img/logo.png}" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-9">
-                        <!-- Menu Area -->
-                        <div class="main_menu_area">
-                            <div class="mainmenu">
-                                <nav>
-                                    <ul id="nav">
-                                        <li class="current_page_item"><a href="index.html">主页</a></li>
-                                        <li><a href="#">公告文章<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="news.html">新闻列表 </a></li>
-                                                <li><a href="artical.html">专栏文章 </a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">最新活动<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="event-grid.html">活动列表 Grid</a></li>
-                                                <li><a href="event-list.html">活动列表 List</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">课程超市<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="course-grid.html">课程列表 Grid</a></li>
-                                                <li><a href="course-list.html">课程列表 List</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">图片游廊<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="gallery-fullwidth.html">展示 Fullwidth</a></li>
-                                                <li><a href="gallery-4-column.html">展示 4 Column</a></li>
-                                                <li><a href="gallery-3-column.html">展示 3 Column</a></li>
-                                                <li><a href="gallery-2-column.html">展示 2 Column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">师资力量<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                            <ul class="sub-menu">
-                                                <li><a href="teachers.html">教师列表</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">联系我们</a></li>
-                                        <a href="userspace-details.html"> <button type="submit" class="btn btn-default" id="login_submit">学习空间</button></a>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="header_area" th:replace="include-content :: header">
     </header>
     <!--  ===================== Header Area End ===================== -->
 
@@ -985,20 +870,7 @@
         </div>
     </footer>
     <!-- ===================== Footer Area End ===================== -->
-
-    <!-- ===================== All jQuery Plugins ===================== -->
-
-    <!-- jQuery (necessary for all JavaScript plugins) -->
-    <script th:src="@{js/jquery-2.2.4.min.js}"></script>
-    <!-- Popper js -->
-    <script th:src="@{js/popper.min.js}"></script>
-    <!-- Bootstrap js -->
-    <script th:src="@{js/static.min.js}"></script>
-    <!-- Plugins js -->
-    <script th:src="@{js/plugins.js}"></script>
-    <!-- Active js -->
-    <script th:src="@{js/custom.js}"></script>
-
 </body>
-
+<!-- Active js 这个js必须最后引入！如果提前引入则导致页面卡在 preload 页面 -->
+<script th:src="@{js/custom.js}"></script>
 </html>
