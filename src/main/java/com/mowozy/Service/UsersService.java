@@ -5,8 +5,6 @@ import com.mowozy.Entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 /**
  * Created by moonwolfzy on 2017-12-12.
  */
@@ -25,7 +23,7 @@ public class UsersService {
         }
     }
 
-    public boolean registerUser(Users user){
+    public boolean  registerUser(Users user){
         if(userDao.findByEmail(user.getEmail()).isEmpty()){
             userDao.save(user);
             return true;
@@ -36,10 +34,6 @@ public class UsersService {
     }
 
     public String getUnameByEmail(String email) {
-        List<Users> usersList =userDao.findByEmail(email);
-        if(usersList.isEmpty())
-            return null;
-        return usersList.get(0).getuName();
     }
 }
 
