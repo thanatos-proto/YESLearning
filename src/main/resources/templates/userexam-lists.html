@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head th:replace="fragment-head:: head">
+</head>
+
+<body>
+
+<!-- Header Area Start -->
+<header class="header_area" th:replace="fragment-head :: header">
+</header>
+<!--  ===================== Header Area End ===================== -->
+
+<!-- ===================== Breadcumb area start ===================== -->
+<section class="breadcumb_area" style="background-image: url(img/bg-pattern/breadcumb.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcumb_section">
+                    <!-- Breadcumb page title start -->
+                    <div class="page_title">
+                        <h3>测试课程Prototype_01学习测试</h3>
+                    </div>
+                    <!-- Breadcumb page pagination start -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ===================== Breadcumb area end ===================== -->
+
+<!-- ========================== User Space Area Start ========================== -->
+<section class="latest_blog_news_area blog sidebar section_padding_100">
+    <div class="container">
+        <div class="row">
+            <!--Left Area Start-->
+            <div class="col-12 col-lg-3">
+                <div class="event_sidebar">
+
+                    <div class="achive_section">
+                        <h3><span>测试名称</span></h3>
+                        <ul>
+                            <li><a><i class="fa fa-bookmark-o" aria-hidden="true"
+                                      th:text="'&nbsp;'+ ${exams.geteName()}"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span>起止时间</span></h3>
+                        <ul>
+                            <li><a><i class="fa fa-play" aria-hidden="true"
+                                      th:text="'&nbsp;'+${exams.geteStartDate()}"></i></a></li>
+                            <li><a><i class="fa fa-stop" aria-hidden="true"
+                                      th:text="'&nbsp;'+${exams.geteEndDate()}"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span>剩余时间</span></h3>
+                        <ul data-countdown="2018/01/15 00:00:00" class="timer ">
+                            <!-- Please use event time this format: YYYY/MM/DD hh:mm:ss -->
+                            <span class="days">0</span>d
+                            <span class="hours">0</span>h
+                            <span class="minutes">00</span>m
+                            <span class="seconds">00</span>s
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span>总分</span> <br></h3>
+                        <ul>
+                            <li><a><i class="fa fa-trophy" aria-hidden="true"
+                                      th:text="'&nbsp;'+${exams.getTotal()}"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="achive_section">
+                        <h3><span></span> <br></h3>
+                        <ul>
+                            <li><a><i class="" aria-hidden="true"></i></a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!--Left Area End-->
+
+            <!--Main Area Start-->
+            <div class="col-12 col-lg-8 ">
+                <table class="table table-striped">
+                    <caption>
+                        <center>
+                            <button type="submit" class="btn-lg btn-default " id="save_exam">保存</button>
+                            <button type="submit" class="btn-lg btn-success " id="submit_exam" onclick="submitResult()">
+                                提交
+                            </button>
+                        </center>
+                    </caption>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>题<br>目</th>
+                        <th>选项</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>选择答案</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div style="width: 300px;"><p th:text="${questionsList.get(0).getQuestion()}"></p></div>
+                        </td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(0).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(0).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(0).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(0).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q1">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><p th:text="${questionsList.get(1).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(1).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(1).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(1).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(1).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q2">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><p th:text="${questionsList.get(2).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(2).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(2).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(2).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(2).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q3">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><p th:text="${questionsList.get(3).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(3).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(3).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(3).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(3).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q4">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><p th:text="${questionsList.get(4).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(4).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(4).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(4).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(4).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q5">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><p th:text="${questionsList.get(5).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(5).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(5).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(5).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(5).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q6">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><p th:text="${questionsList.get(6).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(6).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(6).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(6).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(6).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q7">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><p th:text="${questionsList.get(7).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(7).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(7).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(7).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(7).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q8">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><p th:text="${questionsList.get(8).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(8).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(8).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(8).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(8).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q9">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><p th:text="${questionsList.get(9).getQuestion()}"></p></td>
+                        <td>A</td>
+                        <td><p th:text="${questionsList.get(9).getAnswer1()}"></p></td>
+                        <td>B</td>
+                        <td><p th:text="${questionsList.get(9).getAnswer2()}"></p></td>
+                        <td>C</td>
+                        <td><p th:text="${questionsList.get(9).getAnswer3()}"></p></td>
+                        <td>D</td>
+                        <td><p th:text="${questionsList.get(9).getAnswer4()}"></p></td>
+                        <td>
+                            <select class="input-lg" id="q10">
+                                <option th:value="1">A</option>
+                                <option th:value="2">B</option>
+                                <option th:value="3">C</option>
+                                <option th:value="4">D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<!-- ========================== User Space Area End ========================== -->
+
+<!-- ===================== Footer Area Start ===================== -->
+<footer class="footer_area" th:replace="fragment-foot :: footer">
+</footer>
+<!-- ===================== Footer Area End ===================== -->
+<!-- ===================== All jQuery Plugins ===================== -->
+
+<form>
+
+    <input th:type="hidden" name="zy" th:value="zy1234">
+</form>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    function submitResult() {
+        var myform = $("form");
+        for (var i = 1; i <= 10; ++i) {
+            var name = "q" + i;
+            myform.append("<input type='hidden' name='" + name + "' value='" + $("#" + name).val()+"'>");
+        }
+        myform.attr("action", "userexamresult");
+        myform.attr("method","post");
+        myform.submit();
+    }
+    /*]]>*/
+</script>
+
+<!-- exam js -->
+<script th:src="@{js/exam.js}"></script>
+
+</body>
+
+</html>

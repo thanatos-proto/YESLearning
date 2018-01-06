@@ -20,21 +20,6 @@ public class DemoApplication {
 	}
 
 	@RequestMapping("/") String index(Model model){
-//		return "Web Owner is:"+ ownerSettings.getWebOwner() +"Web name is:" + ownerSettings.getWebName() ;
-//		Person single = new Person("asd" ,123);
-//
-//		model.addAttribute("singlePerson",single);
-//
-//		List<Person> people = new ArrayList<Person>();
-//		Person p1 = new Person("zxc1" ,1);
-//		Person p2 = new Person("zxc2" ,2);
-//		Person p3 = new Person("zxc3" ,3);
-//		people.add(p1);
-//		people.add(p2);
-//		people.add(p3);
-//
-//		model.addAttribute("people",people);
-
 		return "index";
 	}
 
@@ -42,7 +27,4 @@ public class DemoApplication {
 		return "index";
 	}
 
-	@RequestMapping("about-us")String aboutUs(Model model){
-		return "about-us";
-	}
 }

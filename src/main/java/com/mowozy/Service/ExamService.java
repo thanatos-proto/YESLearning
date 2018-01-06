@@ -18,11 +18,13 @@ public class ExamService {
 
     @Autowired
     private QuestionsDao questionsDao;
+
+    @Autowired
     private ExamsDao examsDao;
 
     public List<Questions> makeExam (int eid){
 
-         List<Questions> QList = new ArrayList<Questions>();
+        List<Questions> QList = new ArrayList<Questions>();
         Exams exams = examsDao.findByEId(eid);
         QList.add(questionsDao.findByQId(exams.getQ1()));
         QList.add(questionsDao.findByQId(exams.getQ2()));
@@ -61,5 +63,11 @@ public class ExamService {
             score+=questionsDao.findByQId(exams.getQ1()).getScore();}
         return score;
     }
+    public  Exams findByEid (int eid){
+        Exams exams = examsDao.findByEId(eid);
+        return exams;
+    }
 }
+
+
 

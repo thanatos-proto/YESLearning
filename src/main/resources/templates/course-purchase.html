@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head th:replace="fragment-head:: head">
+</head>
+
+<body>
+
+<!-- Header Area Start -->
+<header class="header_area" th:replace="fragment-head :: header">
+</header>
+<!--  ===================== Header Area End ===================== -->
+    <!-- Breadcumb area start -->
+    <section class="breadcumb_area" style="background-image: url(img/bg-pattern/breadcumb.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcumb_section">
+                        <!-- Breadcumb page title start -->
+                        <div class="page_title">
+                            <h3>课程购买</h3>
+                        </div>
+                        <!-- Breadcumb page pagination start -->
+                        <div class="page_pagination">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                                <li>Course purchase</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcumb area end -->
+
+    <!-- ============================== Courses Details Area Start ============================== -->
+<section class="latest_blog_news_area blog sidebar section_padding_100">
+    <div class="container">
+        <div class="row">
+            <!--Left Area Start-->
+            <div class="col-11  col-lg-6" style="padding-bottom:400px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 item">
+                        <!-- About us text start -->
+                        <div class="about_us_text">
+                            <br>
+                            <h3>订单 <span>详情</span></h3>
+                            <q>确认您的订单信息</q>
+                        </div>
+                        <!-- About us special quote start -->
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>订单名</th>
+                                    <th>测试课程Prototype_01</th>
+                                </tr>
+
+                                <tr>
+                                    <th>订单号</th>
+                                    <th>100011</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>课程号</td>
+                                    <td>100001</td>
+                                </tr>
+                                <tr>
+                                    <td>用户号</td>
+                                    <td>100006</td>
+                                </tr>
+                                <tr>
+                                    <td>订单数量</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>订单价格</td>
+                                    <td>￥120</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Left Area End-->
+
+            <!--Main Area Start-->
+            <div class="col-11 col-lg-6" style="padding-bottom:400px;padding-top:8px;">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-12 col-1">
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="about_us_text">
+                                    <h3>支付 <span>方式</span></h3>
+                                    <q>选择下列支付方式</q>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-md-12 col-11">
+                            <!-- Teacher Details Info Area Start -->
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>支付方式</th>
+                                    <th>选定</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><img th:src = "@{img/purchase-img/zfb.png}" ></td>
+                                    <td>支付宝</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="radio">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img th:src = "@{img/purchase-img/cft.png}" ></td>
+                                    <td>财付通</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="radio">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img th:src = "@{img/purchase-img/yl.png}" ></td>
+                                    <td>银联在线</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="radio">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img th:src = "@{img/purchase-img/js.png}" ></td>
+                                    <td>建设银行</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="radio">
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody></table>
+                            <!-- Teacher Details Info Area End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Main Area End-->
+
+            <div class="col-1 col-lg-12 ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <button type="submit" class="btn btn-warning pull-right" >取消订单</button>
+                        </div>
+
+                        <div class="col-lg-6 col-12">
+                            <button type="submit" class="btn btn-success pull-right" >前往支付</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+    <!-- =============== Courses Details Area End =============== -->
+
+<!-- ===================== Footer Area Start ===================== -->
+<footer class="footer_area" th:replace="fragment-foot :: footer">
+</footer>
+<!-- ===================== Footer Area End ===================== -->
+</body>
+
+</html>

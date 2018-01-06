@@ -46,6 +46,16 @@ public class GalleryController {
         return "course-details";
     }
 
+    @RequestMapping("/course-purchase")
+    String coursepurchase(Model model) {
+        return "course-purchase";
+    }
+
+    @RequestMapping("/about-us")
+    String aboutus(Model model) {
+        return "about-us";
+    }
+
     @RequestMapping("/news")
     String news(Model model){
         return "news";
