@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Courses</title>
+
+    <link rel="shortcut icon" th:href="@{favicon.ico}">
+    <link th:href="@{background/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/font-awesome.min.css}" rel="stylesheet">
+
+    <!-- jqgrid-->
+    <link th:href="@{background/css/plugins/jqgrid/ui.jqgrid.css}" rel="stylesheet">
+
+    <link th:href="@{background/css/animate.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/style.min.css}" rel="stylesheet">
+    <base target="_blank">
+
+    <style>
+        /* Additional style to fix warning dialog position */
+
+        #alertmod_table_list_2 {
+            top: 900px !important;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>课程信息管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="jqGrid_wrapper">
+                        <table id="table_list_2"></table>
+                        <div id="pager_list_2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{background/js/jquery.min.js}"></script>
+<script th:src="@{background/js/bootstrap.min.js}"></script>
+<script th:src="@{background/js/plugins/peity/jquery.peity.min.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/i18n/grid.locale-cn.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/jquery.jqGrid.min.js}"></script>
+<script th:src="@{background/js/content.min.js}"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        $.jgrid.defaults.styleUI = "Bootstrap";
+        var mydata = [{
+            CId: "1",
+            CName: "测试课程Prototype_01",
+            CPrice: "125.00",
+            CImage: "img/course-img/c-1.jpg",
+            Cenddate: "2018-01-31",
+            Cstartdate: "2017-08-01",
+            CPath: "/video/englishavc.mp4"
+        }];
+        $("#table_list_2").jqGrid({
+            data: mydata,
+            datatype: "local",
+            height: 450,
+            autowidth: true,
+            shrinkToFit: true,
+            rowNum: 20,
+            rowList: [10, 20, 30],
+            colNames: ["课程号", "课程名", "图片路径", "价格", "开始时间", "结束时间", "课程路径"],
+            colModel: [{
+                name: "CId",
+                index: "CId",
+                editable: true,
+                width: 60,
+                sorttype: "int",
+                search: true
+            }, {
+                name: "CName",
+                index: "CName",
+                editable: true,
+                width: 90,
+            }, {
+                name: "CImage", index: "CImage", editable: true, width: 100
+            },
+                {
+                    name: "CPrice",
+                    index: "CPrice",
+                    editable: true,
+                    width: 80,
+                    sorttype: "float",
+                    formatter: "number"
+                }, {
+                    name: "Cenddate",
+                    index: "Cenddate",
+                    editable: true,
+                    width: 80,
+                    sorttype: "date",
+                    formatter: "date"
+                }, {
+                    name: "Cstartdate",
+                    index: "Cstartdate",
+                    editable: true,
+                    width: 80,
+                    sorttype: "date",
+                    formatter: "date"
+                }, {
+                    name: "CPath", index: "note", editable: true, width: 100,
+                }],
+            pager: "#pager_list_2",
+            viewrecords: true,
+            caption: "课程列表",
+            add: true,
+            edit: true,
+            addtext: "Add",
+            edittext: "Edit",
+            hidegrid: false
+        });
+        $("#table_list_2").setSelection(4, true);
+        $("#table_list_2").jqGrid("navGrid", "#pager_list_2", {
+            edit: true,
+            add: true,
+            del: true,
+            search: true
+        }, {height: 200, reloadAfterSubmit: true});
+        $(window).bind("resize", function () {
+            var width = $(".jqGrid_wrapper").width();
+            $("#table_list_1").setGridWidth(width);
+            $("#table_list_2").setGridWidth(width)
+        })
+    });
+</script>
+</body>
+
+</html>

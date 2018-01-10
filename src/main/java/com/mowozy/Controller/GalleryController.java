@@ -20,81 +20,97 @@ public class GalleryController {
     String eventlist(Model model) {
         return "event-list";
     }
+	//活动列表
 
     @RequestMapping("/event-grid")
     String eventgrid(Model model) {
         return "event-grid";
     }
 
-    @RequestMapping("/event-details")
+	//活动列表
+	@RequestMapping("/event-details")
     String eventdetails(Model model) {
         return "event-details";
     }
 
-    @RequestMapping("/course-list")
+	//活动细节
+	@RequestMapping("/course-list")
     String courselist(Model model) {
         return "course-list";
     }
+	//课程列表
 
     @RequestMapping("/course-grid")
     String coursegrid(Model model) {
         return "course-grid";
     }
+	//课程列表
 
     @RequestMapping("/course-details")
     String coursedetails(Model model) {
         return "course-details";
     }
 
-    @RequestMapping("/course-purchase")
+	//课程细节
+	@RequestMapping("/course-purchase")
     String coursepurchase(Model model) {
         return "course-purchase";
     }
+	//购买课程
 
     @RequestMapping("/about-us")
     String aboutus(Model model) {
         return "about-us";
     }
 
-    @RequestMapping("/news")
+	//关于我们
+	@RequestMapping("/news")
     String news(Model model){
         return "news";
     }
 
-    @RequestMapping("/news-details")
+	//新闻
+	@RequestMapping("/news-details")
     String newsdetails(Model model){
         return "news-details";
     }
 
-    @RequestMapping("/artical")
+	//新闻细节
+	@RequestMapping("/artical")
     String artical(Model model){
         return "artical";
     }
 
-    @RequestMapping("/artical-details")
+	//文章
+	@RequestMapping("/artical-details")
     String articaldetails(Model model){
         return "artical-details";
     }
 
-    @RequestMapping("/gallery-fullwidth")
+	//文章细节
+	@RequestMapping("/gallery-fullwidth")
     String galleryfullwidth(Model model) {
         return "gallery-fullwidth";
     }
 
-    @RequestMapping("/teachers")
+	//图廊
+	@RequestMapping("/teachers")
     String teachers(Model model){
         return "teachers";
     }
 
-    @RequestMapping("/teachers-details")
+	//教师列表
+	@RequestMapping("/teachers-details")
     String teachersdetails(Model model){
         return "teachers-details";
     }
+	//教师细节
 
     @RequestMapping("/contact")
     String contact(Model model){
         return "contact";
     }
+	//
 }
 
 

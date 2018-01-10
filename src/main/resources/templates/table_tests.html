@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Courses</title>
+
+    <link rel="shortcut icon" th:href="@{favicon.ico}">
+    <link th:href="@{background/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/font-awesome.min.css}" rel="stylesheet">
+
+    <!-- jqgrid-->
+    <link th:href="@{background/css/plugins/jqgrid/ui.jqgrid.css}" rel="stylesheet">
+
+    <link th:href="@{background/css/animate.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/style.min.css}" rel="stylesheet">
+    <base target="_blank">
+
+    <style>
+        /* Additional style to fix warning dialog position */
+
+        #alertmod_table_list_2 {
+            top: 900px !important;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>课程信息管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="jqGrid_wrapper">
+                        <table id="table_list_2"></table>
+                        <div id="pager_list_2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{background/js/jquery.min.js}"></script>
+<script th:src="@{background/js/bootstrap.min.js}"></script>
+<script th:src="@{background/js/plugins/peity/jquery.peity.min.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/i18n/grid.locale-cn.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/jquery.jqGrid.min.js}"></script>
+<script th:src="@{background/js/content.min.js}"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        $.jgrid.defaults.styleUI = "Bootstrap";
+        var mydata = [{
+            EId: "1",
+            EName: "test1",
+            Q1: "1",
+            Q2: "2",
+            Q3: "3",
+            Q4: "4",
+            Q5: "5",
+            Q6: "6",
+            Q7: "7",
+            Q8: "8",
+            Q9: "9",
+            Q10: "10",
+            Cenddate: "2018-01-31",
+            Cstartdate: "2017-08-01"
+        },
+            {
+                EId: "2",
+                EName: "test2",
+                Q1: "1",
+                Q2: "2",
+                Q3: "3",
+                Q4: "4",
+                Q5: "5",
+                Q6: "6",
+                Q7: "7",
+                Q8: "8",
+                Q9: "9",
+                Q10: "10",
+                Cenddate: "2018-01-31",
+                Cstartdate: "2017-08-01"
+            },
+            {
+                EId: "3",
+                EName: "test3",
+                Q1: "1",
+                Q2: "2",
+                Q3: "3",
+                Q4: "4",
+                Q5: "5",
+                Q6: "6",
+                Q7: "7",
+                Q8: "8",
+                Q9: "9",
+                Q10: "10",
+                Cenddate: "2018-01-31",
+                Cstartdate: "2017-08-01"
+            }];
+        $("#table_list_2").jqGrid({
+            data: mydata,
+            datatype: "local",
+            height: 450,
+            autowidth: true,
+            shrinkToFit: true,
+            rowNum: 20,
+            rowList: [10, 20, 30],
+            colNames: ["测试号", "测试名", "问题号1",
+                "问题号2",
+                "问题号3",
+                "问题号4",
+                "问题号5",
+                "问题号6",
+                "问题号7",
+                "问题号8",
+                "问题号9", "问题号10", "开始时间", "结束时间"],
+            colModel: [{
+                name: "EId",
+                index: "EId",
+                editable: true,
+                width: 60,
+                sorttype: "int",
+                search: true
+            }, {
+                name: "EName",
+                index: "EName",
+                editable: true,
+                width: 90,
+            },
+                {
+                    name: "Q1",
+                    index: "Q1",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q2",
+                    index: "Q2",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q3",
+                    index: "Q3",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q4",
+                    index: "Q4",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q5",
+                    index: "Q5",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q6",
+                    index: "Q6",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q7",
+                    index: "Q7",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q8",
+                    index: "Q8",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q9",
+                    index: "Q9",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Q10",
+                    index: "Q10",
+                    editable: true,
+                    width: 30,
+                    sorttype: "int",
+                },
+                {
+                    name: "Cstartdate",
+                    index: "Cstartdate",
+                    editable: true,
+                    width: 80,
+                    sorttype: "date",
+                    formatter: "date"
+                }, {
+                    name: "Cenddate",
+                    index: "Cenddate",
+                    editable: true,
+                    width: 80,
+                    sorttype: "date",
+                    formatter: "date"
+                },],
+            pager: "#pager_list_2",
+            viewrecords: true,
+            caption: "测试列表",
+            add: true,
+            edit: true,
+            addtext: "Add",
+            edittext: "Edit",
+            hidegrid: false
+        });
+        $("#table_list_2").setSelection(4, true);
+        $("#table_list_2").jqGrid("navGrid", "#pager_list_2", {
+            edit: true,
+            add: true,
+            del: true,
+            search: true
+        }, {height: 200, reloadAfterSubmit: true});
+        $(window).bind("resize", function () {
+            var width = $(".jqGrid_wrapper").width();
+            $("#table_list_1").setGridWidth(width);
+            $("#table_list_2").setGridWidth(width)
+        })
+    });
+</script>
+</body>
+
+</html>

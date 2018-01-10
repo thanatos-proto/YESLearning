@@ -7,19 +7,11 @@ import java.util.List;
 
 public interface CoursesDao extends JpaRepository<Courses,Integer> {
 
-//	public List<Goods> getGoodById(Goods goods);
 
 	List<Courses> findByCId(Integer cid);
+	//通过课程号查找
 
-//	public List<Goods> getAll();
-
-//	public List<Goods> getGoodByName(String goods);
 	List<Courses> findByCName(String cname);
-
-//	public void delete(Goods goods);
-//
-//	public int update(Goods goods);
-//
-//	public int insert(Goods goods);
+	//通过课程名查找
 
 }

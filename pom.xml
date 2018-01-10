@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -106,14 +106,28 @@
                     <fork>true</fork>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <nonFilteredFileExtensions>
+                        <nonFilteredFileExtension>ttf</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>woff</nonFilteredFileExtension>
+                        <nonFilteredFileExtension>woff2</nonFilteredFileExtension>
+                    </nonFilteredFileExtensions>
+                </configuration>
+            </plugin>
         </plugins>
+
 
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
                 <excludes>
-                    <exclude>static/fonts/**</exclude>
+                    <exclude>static/background/fonts/**</exclude>
+                    <exclude>static/foreground/fonts/**</exclude>
                 </excludes>
             </resource>
 
@@ -121,7 +135,8 @@
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>false</filtering>
                 <includes>
-                    <include>static/fonts/**</include>
+                    <include>static/background/fonts/**</include>
+                    <include>static/foreground/fonts/**</include>
                 </includes>
             </resource>
         </resources>

@@ -45,22 +45,21 @@
                     <div class="login_thumb" style="background-image: url(img/bg-pattern/courses-bg.jpg);">
                         <!-- Login thumb caption -->
                         <div class="login_thumb_caption">
-                            <h3>Register is so Easy!</h3>
-                            <p>Register &amp; start learning.</p>
+                            <h3>注册成功!</h3>
                         </div>
                     </div>
                 </div>
                 <!-- Register form area start  -->
                 <div class="col-12 col-lg-7 col-xl-6">
                     <div class="register_form">
-                        <form action="#" method="post" th:action="@{/users-details}" >
+                        <form action="login" method="post">
                             <!-- Single Register input area start  -->
                             <div class="form-group">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <label th:text = "'用户 ：'+${name}+'注册成功'"></label>
                             </div>
 
-                            <button type="submit" class="btn btn-default" id="login_submit">Sign In</button>
+                            <button type="submit" class="btn btn-default" id="login_submit">去登陆</button>
                         </form>
                     </div>
                 </div>

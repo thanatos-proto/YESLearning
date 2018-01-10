@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface ExamsDao extends JpaRepository<Exams,Integer> {
      Exams findByEId(Integer eid);
+	//通过考试号查找
 }

@@ -12,5 +12,8 @@ import java.util.List;
 
 public interface UsersDao extends JpaRepository<Users,Integer>{
     List<Users> findByEmailAndPassword(String email, String password);
+	//通过邮箱和密码查找
+
     List<Users> findByEmail(String email);
+	//通过邮箱查找
 }

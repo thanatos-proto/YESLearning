@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface QuestionsDao extends JpaRepository<Questions,Integer> {
     Questions findByQId(Integer qid);
-
+	//通过问题号查找
 }

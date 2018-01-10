@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Activity</title>
+
+    <link rel="shortcut icon" th:href="@{favicon.ico}">
+    <link th:href="@{background/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/font-awesome.min.css}" rel="stylesheet">
+
+    <link th:href="@{background/css/animate.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/style.min.css}" rel="stylesheet">
+    <base target="_blank">
+
+</head>
+
+<body class="gray-bg">
+<div class="row">
+    <div class="col-sm-9">
+        <div class="wrapper wrapper-content animated fadeInUp">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="m-b-md">
+                                <a href="project_detail.html#" class="btn btn-white btn-xs pull-right">编辑活动</a>
+                                <h2>7 Quick Ways to Make a Great Event Successful</h2>
+                            </div>
+                            <dl class="dl-horizontal">
+                                <dt>状态：</dt>
+                                <dd><span class="label label-primary">报名中</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <dl class="dl-horizontal">
+
+                                <dt>活动发起人：</dt>
+                                <dd>Mowozy</dd>
+                                <dt>人数：</dt>
+                                <dd>62</dd>
+                                <dt>创建于：</dt>
+                                <dd>2017年 12月16日 03:01</dd>
+
+                            </dl>
+                        </div>
+                        <div class="col-sm-7" id="cluster_info">
+                            <dl class="dl-horizontal">
+
+                                <dt>团队成员：</dt>
+                                <dd class="project-people">
+                                    <a href="project_detail.html">
+                                        <img alt="image" class="img-circle" src="img/teacher-img/team-member-1.jpg">
+                                    </a>
+                                    <a href="project_detail.html">
+                                        <img alt="image" class="img-circle" src="img/teacher-img/team-member-2.jpg">
+                                    </a>
+                                    <a href="project_detail.html">
+                                        <img alt="image" class="img-circle" src="img/teacher-img/team-member-3.jpg">
+                                    </a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <dl class="dl-horizontal">
+                                <dt>活动余量</dt>
+                                <dd>
+                                    <div class="progress progress-striped active m-b-sm">
+                                        <div style="width: 38%;" class="progress-bar"></div>
+                                    </div>
+                                    <small>当前活动人数剩余 <strong>38%</strong></small>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="row m-t-sm">
+                        <div class="col-sm-12">
+                            <div class="panel blank-panel">
+                                <div class="panel-heading">
+                                    <div class="panel-options">
+                                        <ul class="nav nav-tabs">
+                                            <li><a href="project_detail.html#tab-1" data-toggle="tab">团队消息</a>
+                                            </li>
+                                            <li class=""><a href="project_detail.html#tab-2" data-toggle="tab">最后更新</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="panel-body">
+
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab-1">
+                                            <section class="comment">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <!-- Comment Title -->
+                                                            <div class="comment-title">
+                                                                <h4>2 Comments</h4></div>
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="comments-wrapper clearfix">
+                                                                        <!-- Commenter Avater -->
+                                                                        <div class="comment-img">
+                                                                            <img class="img-circle"
+                                                                                 style="width:100px ;height:100px"
+                                                                                 th:src="@{img/teacher-img/team-member-2.jpg}"
+                                                                                 alt="Author Pic">
+                                                                        </div>
+                                                                        <!-- Single Comment Area Start -->
+                                                                        <div class="single-comment">
+                                                                            <div class="comment-head clearfix">
+                                                                                <div class="commenter">
+                                                                                    <a class="name" href="#"><h5>Delower
+                                                                                        Hosain</h5></a>
+                                                                                    <div class="comment-time"><span>Jan 14, 2016</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a class="replay d-none d-sm-block"
+                                                                                   href="#">reply</a>
+                                                                            </div>
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur
+                                                                                adipisicing elit, sed do eiusmod tempor
+                                                                                incididunt ut labore et dolore magna
+                                                                                aliqua. Ut enim ad minim veniam, quis
+                                                                                nos exercitation ullamco laboris nisi ut
+                                                                                aliquip ex ea commodo consequat. Duis
+                                                                                aute irure dolor in reprehenderit in
+                                                                                voluptate velit esse cillum.</p>
+                                                                            <a class="replay d-sm-none"
+                                                                               href="#">reply</a>
+                                                                        </div>
+                                                                        <!-- Single Comment Area End -->
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="comments-wrapper clearfix">
+                                                                        <!-- Commenter Avater -->
+                                                                        <div class="comment-img">
+                                                                            <img class="img-circle "
+                                                                                 style="width:100px ;height:100px"
+                                                                                 th:src="@{img/teacher-img/team-member-3.jpg}"
+                                                                                 alt="Author Pic">
+                                                                        </div>
+                                                                        <!-- Single Comment Area Start -->
+                                                                        <div class="single-comment">
+                                                                            <div class="comment-head clearfix">
+                                                                                <div class="commenter">
+                                                                                    <a class="name" href="#"><h5>Dipti
+                                                                                        Islam</h5></a>
+                                                                                    <div class="comment-time"><span>Jan 14, 2016</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a class="replay d-none d-sm-block"
+                                                                                   href="#">reply</a>
+                                                                            </div>
+                                                                            <p>Lorem ipsum dolor sit amet, consectetur
+                                                                                adipisicing elit, sed do eiusmod tempor
+                                                                                incididunt ut labore et dolore magna
+                                                                                aliqua. Ut enim ad minim veniam, quis
+                                                                                nos exercitation ullamco laboris nisi ut
+                                                                                aliquip ex ea commodo consequat. Duis
+                                                                                aute irure dolor in reprehenderit in
+                                                                                voluptate velit esse cillum.</p>
+                                                                            <a class="replay d-sm-none"
+                                                                               href="#">reply</a>
+                                                                        </div>
+                                                                        <!-- Single Comment Area End -->
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                        </div>
+                                        <div class="tab-pane" id="tab-2">
+
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>状态</th>
+                                                    <th>标题</th>
+                                                    <th>开始时间</th>
+                                                    <th>结束时间</th>
+                                                    <th>说明</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary"><i class="fa fa-check"></i> 已完成</span>
+                                                    </td>
+                                                    <td>
+                                                        文档在线预览功能
+                                                    </td>
+                                                    <td>
+                                                        11月7日 22:03
+                                                    </td>
+                                                    <td>
+                                                        11月7日 20:11
+                                                    </td>
+                                                    <td>
+                                                        <p class="small">
+                                                            已经测试通过
+                                                        </p>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary"><i class="fa fa-check"></i> 解决中</span>
+                                                    </td>
+                                                    <td>
+                                                        会员登录
+                                                    </td>
+                                                    <td>
+                                                        11月7日 22:03
+                                                    </td>
+                                                    <td>
+                                                        11月7日 20:11
+                                                    </td>
+                                                    <td>
+                                                        <p class="small">
+                                                            测试中
+                                                        </p>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span class="label label-primary"><i class="fa fa-check"></i> 解决中</span>
+                                                    </td>
+                                                    <td>
+                                                        会员积分
+                                                    </td>
+                                                    <td>
+                                                        11月7日 22:03
+                                                    </td>
+                                                    <td>
+                                                        11月7日 20:11
+                                                    </td>
+                                                    <td>
+                                                        <p class="small">
+                                                            未测试
+                                                        </p>
+                                                    </td>
+
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="wrapper wrapper-content project-manager">
+            <h4>活动描述</h4>
+            <p class="small">
+                <br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa natus eos fuga ex, eum explicabo,
+                recusandae, vitae provident beatae quibusdam deserunt minus quis voluptate, sapiente minima mollitia.
+                Praesentium nulla, sunt perferendis, sit facere dolorem cum voluptatum et, sequi hic unde molestias
+                soluta perspiciatis molestiae, aspernatur quos qui non nam exercitationem.
+            </p>
+            <p class="small font-bold">
+                <span><i class="fa fa-circle text-warning"></i> 高优先级</span>
+            </p>
+
+
+            <ul class="list-unstyled project-files">
+                <li><h5>项目文档</h5></li>
+                <li><a href="project_detail.html"><i class="fa fa-file"></i> Project_document.docx</a>
+                </li>
+                <li><a href="project_detail.html"><i class="fa fa-file-picture-o"></i> Logo_zender_company.jpg</a>
+                </li>
+                <li><a href="project_detail.html"><i class="fa fa-stack-exchange"></i> Email_from_Alex.mln</a>
+                </li>
+                <li><a href="project_detail.html"><i class="fa fa-file"></i> Contract_20_11_2014.docx</a>
+                </li>
+            </ul>
+            <div class="m-t-md">
+                <a href="project_detail.html#" class="btn btn-xs btn-primary">添加文档</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="background/js/jquery.min.js?v=2.1.4"></script>
+<script src="background/js/bootstrap.min.js?v=3.3.5"></script>
+<script src="background/js/content.min.js?v=1.0.0"></script>
+<script>
+    $(document).ready(function () {
+        $("#loading-example-btn").click(function () {
+            btn = $(this);
+            simpleLoad(btn, true);
+            simpleLoad(btn, false)
+        })
+    });
+    function simpleLoad(btn, state) {
+        if (state) {
+            btn.children().addClass("fa-spin");
+            btn.contents().last().replaceWith(" Loading")
+        } else {
+            setTimeout(function () {
+                btn.children().removeClass("fa-spin");
+                btn.contents().last().replaceWith(" Refresh")
+            }, 2000)
+        }
+    };
+</script>
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>
+
+</body>
+
+</html>

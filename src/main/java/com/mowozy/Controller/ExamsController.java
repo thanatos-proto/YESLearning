@@ -28,24 +28,21 @@ public class ExamsController {
 
         return "usercourse-index";
     }
+	//用户课程主页
 
     @RequestMapping("usercourse-lesson")String usercourselesson(Model model)
     {
 
         return "usercourse-lesson";
     }
+	//用户课程列表
 
     @RequestMapping("userexam-index")String userexamindex(Model model){
 
         return "userexam-index";
     }
+	//用户考试主页
 
-    @RequestMapping("userexam-list")String userexamList(Model model)
-
-    {
-        model.addAttribute("num", 1);
-        return "userexam-list";
-    }
 
     @RequestMapping("userexam-lists")String userexamLists(Model model)
     {
@@ -56,6 +53,8 @@ public class ExamsController {
 
         return "userexam-lists";
     }
+
+//    用户考试列表
 
     @RequestMapping("userexamresult")String userexamResult(HttpServletRequest request , Exams examsresult, Model model)
 
@@ -76,10 +75,11 @@ public class ExamsController {
         return "userexam-result";
     }
 
-    @RequestMapping("userexam-result")String userexamresult(Model model){
+	//用户考试结果
+	@RequestMapping("userexam-result")String userexamresult(Model model){
 
-        return "userexam-result";
-    }
+		return "userexam-result";
+	}
 }
 
 

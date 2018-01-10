@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Courses</title>
+
+    <link rel="shortcut icon" th:href="@{favicon.ico}">
+    <link th:href="@{background/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/font-awesome.min.css}" rel="stylesheet">
+
+    <!-- jqgrid-->
+    <link th:href="@{background/css/plugins/jqgrid/ui.jqgrid.css}" rel="stylesheet">
+
+    <link th:href="@{background/css/animate.min.css}" rel="stylesheet">
+    <link th:href="@{background/css/style.min.css}" rel="stylesheet">
+    <base target="_blank">
+
+    <style>
+        /* Additional style to fix warning dialog position */
+
+        #alertmod_table_list_2 {
+            top: 900px !important;
+        }
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox ">
+                <div class="ibox-title">
+                    <h5>用户信息管理</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="jqGrid_wrapper">
+                        <table id="table_list_2"></table>
+                        <div id="pager_list_2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:src="@{background/js/jquery.min.js}"></script>
+<script th:src="@{background/js/bootstrap.min.js}"></script>
+<script th:src="@{background/js/plugins/peity/jquery.peity.min.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/i18n/grid.locale-cn.js}"></script>
+<script th:src="@{background/js/plugins/jqgrid/jquery.jqGrid.min.js}"></script>
+<script th:src="@{background/js/content.min.js}"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        $.jgrid.defaults.styleUI = "Bootstrap";
+        var mydata = [
+            {
+                UId: "1",
+                UName: "aa",
+                Email: "aa@aa.com",
+                Password: "aa",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "2",
+                UName: "cc",
+                Email: "cc@cc.com",
+                Password: "cc",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "3",
+                UName: "dd",
+                Email: "dd@dd.com",
+                Password: "dd",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "4",
+                UName: "ee",
+                Email: "ee@ee.com",
+                Password: "ee",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "5",
+                UName: "qq",
+                Email: "qq@qq.com",
+                Password: "qq",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "6",
+                UName: "慕容杰克",
+                Email: "mowozy@foxmail.com",
+                Password: "aa",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "7",
+                UName: "zz",
+                Email: "zz@zz.com",
+                Password: "zz",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+            {
+                UId: "8",
+                UName: "ff",
+                Email: "ff@ffa.com",
+                Password: "ff",
+                Grade: "初中二年级",
+                UPhone: "111111111",
+                Authority: "1"
+            },
+
+        ];
+        $("#table_list_2").jqGrid({
+            data: mydata,
+            datatype: "local",
+            height: 450,
+            autowidth: true,
+            shrinkToFit: true,
+            rowNum: 20,
+            rowList: [10, 20, 30],
+            colNames: ["用户号", "用户名", "邮箱", "密码", "年级", "手机", "权限"],
+            colModel: [{
+                name: "UId",
+                index: "UId",
+                editable: true,
+                width: 60,
+                sorttype: "int",
+                search: true
+            }, {
+                name: "UName",
+                index: "UName",
+                editable: true,
+                width: 90,
+                sorttype: "text",
+            }, {
+                name: "Email",
+                index: "Email",
+                editable: true,
+                width: 100
+            },
+                {
+                    name: "Password",
+                    index: "Password",
+                    editable: true,
+                    width: 80,
+                }, {
+                    name: "Grade",
+                    index: "Grade",
+                    editable: true,
+                    width: 80,
+                }, {
+                    name: "UPhone",
+                    index: "UPhone",
+                    editable: true,
+                    width: 80,
+                    sorttype: "int"
+                }, {
+                    name: "Authority",
+                    index: "Authority",
+                    editable: true,
+                    width: 80,
+                    sorttype: "int"
+                }],
+            pager: "#pager_list_2",
+            viewrecords: true,
+            caption: "用户列表",
+            add: true,
+            edit: true,
+            addtext: "Add",
+            edittext: "Edit",
+            hidegrid: false
+        });
+        $("#table_list_2").setSelection(4, true);
+        $("#table_list_2").jqGrid("navGrid", "#pager_list_2", {
+            edit: true,
+            add: true,
+            del: true,
+            search: true
+        }, {height: 200, reloadAfterSubmit: true});
+        $(window).bind("resize", function () {
+            var width = $(".jqGrid_wrapper").width();
+            $("#table_list_2").setGridWidth(width)
+        })
+    });
+</script>
+</body>
+
+</html>
