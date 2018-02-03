@@ -1,15 +1,13 @@
 package com.mowozy.Entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
  * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
+@Table(name = "grades")
 public class Grades {
     private int gId;
     private Integer uId;

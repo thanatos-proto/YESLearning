@@ -1,14 +1,12 @@
 package com.mowozy.Entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /**
  * Created by moonwolfzy on 2017-12-13.
  */
 @Entity
+@Table(name = "userscourses")
 public class Userscourses {
     private int ucId;
     private Integer uId;

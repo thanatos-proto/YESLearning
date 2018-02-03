@@ -6,7 +6,7 @@
     <session-factory>
                 <!-- Database connection settings -->
                 <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-                <property name="connection.url">jdbc:mysql://localhost:3306/yes</property><![CDATA[
+                <property name="connection.url">jdbc:mysql://127.0.0.1:1204/yes</property><![CDATA[
                 
                 
                 ]]><!-- JDBC connection pool (use the built-in) -->
@@ -33,6 +33,7 @@
         <mapping resource="com/mowozy/Entity/Trans.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Trans"/>
         <mapping class="com.mowozy.Entity.Users"/>
+
         <mapping resource="com/mowozy/Entity/Users.hbm.xml"/>
         <mapping resource="com/mowozy/Entity/Usersappearance.hbm.xml"/>
         <mapping class="com.mowozy.Entity.Usersappearance"/>
